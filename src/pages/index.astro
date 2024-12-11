@@ -3,8 +3,10 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import rampaImg from '~/assets/images/rampa.jpg';
+import rampaNigthImg from '~/assets/images/rampa_noche.jpg'
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Bienvenido',
@@ -12,6 +14,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  
   <!-- Hero2 Widget ******************* -->
 
   <Hero
@@ -27,43 +30,80 @@ const metadata = {
       alt: 'Inflable Rampa',
     }}
   />
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Aparta con $200.00 MXN',
+        description:
+          'Contáctanos por whatsapp para verificar disponibilidad y aparta tu fecha con solo $200.00 MXN',
+      },
+      {
+        title: 'Horarios de renta flexibles',
+        description:
+          'Entendemos que todos los eventos son diferentres. No te preocupes por el horario, nos adaptamos a tus necesidades.',
+      },
+      {
+        title: 'En la puerta de tu hogar',
+        description:
+          'Contamos con servicio en la ciudad de Puebla y Cholula.',
+      },
+      {
+        title: 'Limpio y desinfectado',
+        description: `Por la higiene sientete seguro te entregamos el inflable limpio y desinfectado.`,
+      },
+    ]}
+    image={{
+      src: rampaNigthImg,
+      alt: 'Inflable rampa de noche',
+    }}
+  >
+    <Fragment slot="content">Solo aparta y nos hacemos cargo del resto</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Steps Widget ****************** -->
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Para rentar el inflable sigue los siguientes pasos."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Mandanos mensaje por whatsapp o dejanos tu contacto y fecha de interes y nos pondremos en contacto con tigo.",
+        icon: 'tabler:brand-whatsapp',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Paso 2: <span class="font-medium">Verifica disponibilidad</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Confirma la disponibilidad para el día de tu fiesta.",
+        icon: 'tabler:calendar-check',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Paso 3: <span class="font-medium">Aparta la fecha</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Tenemos pago con efectivo, y transferencia. Elije la que mejor te acomode',
+        icon: 'tabler:paywall',
       },
       {
-        title: 'Ready!',
+        title: 'Todo listo para tu fiesta!',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: rampaImg,
       alt: 'Steps image',
     }}
   />
 
  <!-- FAQs Widget ******************* -->
 
- <FAQs
+ <!-- <FAQs
   title="Frequently Asked Questions"
   subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
   tagline="FAQs"
@@ -100,5 +140,6 @@ const metadata = {
         "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
     },
   ]}
-  />
+  /> -->
+
 </Layout>
