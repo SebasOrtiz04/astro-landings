@@ -11,6 +11,8 @@ import GetFormForm from '~/components/forms/getformForm.astro';
 const metadata = {
   title: 'Bienvenido',
 };
+
+const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20sitio%20y%20quiero%20información%20sobre%20el%20infblable.'
 ---
 
 <Layout metadata={metadata}>
@@ -18,12 +20,12 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero
-    tagline="Renta de inflables"
+    tagline="Inflables Orca"
     title="¡Rentame para tus fiestas!"
     subtitle="Renta este divertido inflable de 6m x 4m a tan solo $850.00 MXN."
     actions={[
-      { variant: 'primary', text: 'Contáctanos', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: 'Contáctanos', href: whatsAppUrl, icon: 'tabler:brand-whatsapp', target: '_blank' },
+      // { text: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61569751381424', icon: 'tabler:brand-facebook', target: '_blank' },
     ]}
     image={{
       src: rampaImg,
