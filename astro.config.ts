@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import vercel from '@astrojs/vercel';
 
 import { defineConfig } from 'astro/config';
 
@@ -23,7 +24,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'server',
-
+  adapter: vercel(),
   integrations: [
     tailwind({
       applyBaseStyles: false,
