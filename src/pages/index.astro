@@ -6,7 +6,7 @@ import rampaImg from '~/assets/images/rampa.jpg';
 import rampaNigthImg from '~/assets/images/rampa_noche.jpg'
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import GetFormForm from '~/components/forms/getformForm.astro';
+import GetFormForm from '~/components/forms/getformForm.js';
 
 const metadata = {
   title: 'Bienvenido',
@@ -24,7 +24,7 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     title="¡Rentame para tus fiestas!"
     subtitle="Renta este divertido inflable de 6m x 4m a tan solo $850.00 MXN."
     actions={[
-      { variant: 'primary', text: 'Contáctanos', href: whatsAppUrl, icon: 'tabler:brand-whatsapp', target: '_blank' },
+      { variant: 'secondary', text: 'Contáctanos', href: whatsAppUrl, icon: 'tabler:brand-whatsapp', target: '_blank' },
       // { text: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61569751381424', icon: 'tabler:brand-facebook', target: '_blank' },
     ]}
     image={{
@@ -103,6 +103,6 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     }}
   />
   
-  <GetFormForm/>
+  <GetFormForm client:load/>
 
 </Layout>

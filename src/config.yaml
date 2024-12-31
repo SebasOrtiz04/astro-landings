@@ -1,5 +1,5 @@
 site:
-  name: Infblables Orca
+  name: Inflables Orca
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Infblables Orca
-    template: '%s — Infblables Orca'
+    default: Inflables Orca
+    template: '%s — Inflables Orca'
   description: "\U0001F680 Renta de inflables para tus eventos - Diversión asegurada con inflables seguros y de calidad. Perfectos para cumpleaños, fiestas y eventos especiales. ¡Reserva ahora!"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Infblables Orca
+    site_name: Inflables Orca
     images:
       - url: '~/assets/images/default.png'
         width: 1200
