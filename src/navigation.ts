@@ -1,3 +1,4 @@
+import { whatsAppUrl } from './utils/forms';
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
@@ -116,7 +117,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Contrata', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Contrata', href: whatsAppUrl, target: '_blank', icon:'tabler:brand-whatsapp' }],
 };
 
 export const footerData = {
@@ -178,7 +179,7 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-  <div class="flex gap-2 items-baseline text-sm mr-4 dark:text-muted">
+  <div class="flex flex-col md:flex-row gap-2 items-baseline text-sm mr-4 dark:text-muted">
     Hecho con ❤️ por 
     <a class="text-blue-600 underline dark:text-muted" target='_blanck' href="https://sebas.mistli.com.mx/"> Sebas Ortiz</a> 
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
