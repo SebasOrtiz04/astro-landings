@@ -1,7 +1,8 @@
 
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import formApi from "~/services/formsApi";
-
+import { regex, removeEmptyKeys, sendInitialState } from "~/utils/forms";
 
 // Constantes ---------------------------------------------------------------------------------
 
@@ -13,17 +14,17 @@ const formInitialState = {full_name: '',phone: '', date_answer: ''}
 const formErrorsInitialState = {
     full_name: {
         status:true,
-        regex: new RegExp(/^[A-Za-zÁÉÍÓÚáéíóúñÑ]{2,}(\s[A-Za-zÁÉÍÓÚáéíóúñÑ'`]{2,})*$/),
+        regex: regex.optional_date_answer,
         message:'El nombre solo puedo contener letras y espacios'
     }, 
     phone: {
         status:false,
-        regex: new RegExp(/^\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{3,4}[-.\s]?\d{4,6}$/),
+        regex: regex.required_phone,
         message:'El whastapp debe ser un numero valido'
     }, 
     date_answer: {
         status:true,
-        regex: new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/),
+        regex: regex.required_date_answer,
         message:'Ingrese uan fecha válida'
     }
 }
@@ -65,9 +66,7 @@ const SnackBar = ({text, open, handleClose, status = 'info'}) => {
             ${open ? 'translate-y-20 ' : '-translate-y-full'} transition-all duration-300 ease-in-out`
         }>
             <div className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                </svg>
+                <Icon icon="tabler:info-square-rounded" width="24" height="24" />
                 <span className="text-bold">{text}</span>
             </div>
         </div>
@@ -79,12 +78,12 @@ const ContactForm = () => {
     
     const [form, setForm] = useState(formInitialState);
     const [formErrors, setFormErrors] = useState(formErrorsInitialState);
+    const [send, setSend] = useState(sendInitialState);
 
     const [msg, setMsg] = useState({text: '', status: 'info'});
     const [open, setOpen] = useState(false);
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
-
     
     useEffect(()=>{
         const newErrors = {...formErrors}
@@ -109,28 +108,33 @@ const ContactForm = () => {
     }
 
     const lastValidate = form => {
-        const someError = Object.keys(form).some(key => !formErrors[key] && form[key])
-        console.log(someError)
-        return someError
+        const someError = Object.keys(form).some(key => !formErrors[key].status)
+        return !someError
     }
 
     const handleSend = async  e => {
         e.preventDefault();
+
+        setSend({...send, loading:true, status:-1})
         try{
             const isValidid = lastValidate(form)
-            
             if(!isValidid){
                 setMessage('Formulario no válido', 'warning')
                 return;
             }
 
-            const response = await formApi.post('/forms', {});
-            
-            if(response.status === 201)
+            const cookedForm = removeEmptyKeys(form)
+            const response = await formApi.post('/forms', cookedForm);
+
+            if(response.status === 201){
+                setForm(formInitialState)
                 setMessage('Mensaje enviado con éxito', 'success')
+            }
 
         }catch(error){
             setMessage(error.message, 'error');
+        }finally{
+            setSend({...send, loading:false})
         }
     }
 
@@ -148,7 +152,7 @@ return (
         <h3 className="text-2xl max-w-[500px] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
         <div 
         className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] 
-        border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary
+        border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default
         ">
             <form id="contactForm" className="w-full">
                 
@@ -189,7 +193,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.date_answer} value={form.date_answer}>
-                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes : </label>
+                        <label className={labelStyles} id='date-label' htmlFor="date_answer">* Fecha de interes : </label>
                         <input 
                             type="date" 
                             value={form.date_answer}
@@ -204,7 +208,10 @@ return (
 
             </form>
                 <button type="submit" onClick={handleSend} className="mt-5 btn-secondary w-[100%] focus:outline-none focus:ring-0">
-                    {/* { load} */}
+                    {
+                        send.loading 
+                        ? <Icon icon="tabler:loader-3" width="24" height="24" className='animate-spin' />
+                        : <Icon icon="tabler:send" width="24" height="24" />}
                     Enviar
                 </button>
         </div>

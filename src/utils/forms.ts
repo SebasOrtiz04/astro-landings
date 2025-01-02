@@ -13,6 +13,11 @@ export const formInitialState : FormInitialState = {
     date_answer: ''
 }
 
+export const sendInitialState = {
+    loading:false,
+    status:-1
+}
+
 // Regex ---------------------------------------------------------------------------------
 type RegexOptions = 'optional_full_name' | 'required_phone' | 'optional_date_answer' | 'required_date_answer';
 type RegexList = Record<RegexOptions, RegExp>;
@@ -28,3 +33,15 @@ export const styles = {
 
 }
 
+// helpers ---------------------------------------------------------------------------------
+
+export const removeEmptyKeys = (obj) => {
+    for (const key in obj) {
+      if (obj[key] === null || obj[key] === undefined || obj[key] === '') {
+        delete obj[key];
+      }
+    }
+    return obj;
+};
+
+export const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20sitio%20y%20quiero%20información%20sobre%20el%20infblable.'
