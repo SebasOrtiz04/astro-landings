@@ -150,10 +150,9 @@ return (
         />
         
         <h3 className="text-2xl max-w-[500px] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
-        <div 
-        className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] 
-        border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default
-        ">
+        <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] 
+        border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default">
+        
             <form id="contactForm" className="w-full">
                 
                 <fieldset className="flex flex-col gap-3" aria-labelledby='general-data'>
