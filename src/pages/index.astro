@@ -2,11 +2,14 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import rampaImg from '~/assets/images/rampa.jpg';
-import rampaNigthImg from '~/assets/images/rampa_noche.jpg'
+import rampaImg from '~/assets/images/rampa1.jpg';
+import rampaImg1 from '~/assets/images/rampa2.jpg';
+import rampaImg2 from '~/assets/images/rampa3.jpg';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import GetFormForm from '~/components/forms/getformForm.jsx';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = {
   title: 'Bienvenido',
@@ -59,7 +62,7 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
       },
     ]}
     image={{
-      src: rampaNigthImg,
+      src: rampaImg1,
       alt: 'Inflable rampa de noche',
     }}
   >
@@ -69,6 +72,57 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+  
+  
+  
+  <FAQs
+  title="Preguntas frecuentes"
+  subtitle="Nuestros clientes suelen tener preguntas similares. Recuerda, cualquier duda adicional podemos resolverla por WhatsApp."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+      {
+        title: '¿El inflable se entrega y se instala en mi evento?',
+        description:
+          "Sí, nuestro equipo se encarga de entregar e instalar el inflable en la ubicación de tu evento. Solo necesitamos un espacio plano y accesible para asegurar una instalación adecuada.",
+        },
+      {
+        title: '¿Cuánto tiempo puedo rentar un inflable?',
+        description:
+          "El tiempo de renta estándar es de 6 a 8 horas, pero podemos ajustar según tus necesidades. Consulta con nosotros si requieres un horario extendido.",
+        },
+      {
+        title: '¿Cuando se retira el inflable de mi evento?',
+        description:
+          "El infblable se retira al término del evento acordado a la hora de contratación. Nos encargamos de limpiarlo y de mantenerlo en buen estado para su reutilización.",
+        },
+      {
+        title: '¿Es seguro para los niños jugar en los inflables?',
+        description:
+          "Los inflables son muy divertidos y en general no suelen representar un peligro para los niños sin ambargo recomendamos siempre la supervisión de un adulto mientras se usan.",
+        },
+      {
+        title: '¿Necesito acceso a electricidad para instalar un inflable?',
+        description:
+          "Sí, los inflables necesitan una toma de corriente cercana para operar el motor que los mantiene inflados.",
+        },
+      {
+        title: '¿Qué tipo de inflables ofrecen para renta?',
+        description:
+          "Actualmente contamos con una rampa de 4m x 6m la cual se muestra en las fotos de este sitio.",
+        },
+    ]}
+  />
+
+  <div class="flex flex-col items-center justify-center h-40">
+    <Button 
+    text='WhatsApp'
+    icon="tabler:brand-whatsapp"
+    href={whatsAppUrl}
+    target="_blank"
+    />
+  </div>
 
   <!-- Steps Widget ****************** -->
   <Steps
@@ -98,7 +152,7 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
       },
     ]}
     image={{
-      src: rampaImg,
+      src: rampaImg2,
       alt: 'Steps image',
     }}
   />
