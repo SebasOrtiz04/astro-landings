@@ -14,7 +14,7 @@ const formInitialState = {full_name: '',phone: '', date_answer: ''}
 const formErrorsInitialState = {
     full_name: {
         status:true,
-        regex: regex.optional_date_answer,
+        regex: regex.optional_full_name,
         message:'El nombre solo puedo contener letras y espacios'
     }, 
     phone: {

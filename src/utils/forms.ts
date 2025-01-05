@@ -23,7 +23,7 @@ type RegexOptions = 'optional_full_name' | 'required_phone' | 'optional_date_ans
 type RegexList = Record<RegexOptions, RegExp>;
 
 export const regex : RegexList = {
-    optional_full_name : new RegExp(/^$|^[A-Za-zÁÉÍÓÚáéíóúñÑ]{2,}(\s[A-Za-zÁÉÍÓÚáéíóúñÑ'`]{2,})*$/),
+    optional_full_name: new RegExp(/^$|^[A-Za-zÁÉÍÓÚáéíóúñÑ]{2,}(?:\s[A-Za-zÁÉÍÓÚáéíóúñÑ'`]{2,})*$/),
     required_phone : new RegExp(/^\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{3,4}[-.\s]?\d{4,6}$/),
     optional_date_answer : new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$|^$/),
     required_date_answer : new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/),
