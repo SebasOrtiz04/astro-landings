@@ -19,7 +19,7 @@ export const sendInitialState = {
 }
 
 // Regex ---------------------------------------------------------------------------------
-type RegexOptions = 'optional_full_name' | 'required_phone' | 'optional_date_answer' | 'required_date_answer';
+type RegexOptions = 'optional_full_name' | 'required_phone' | 'optional_date_answer' | 'required_date_answer' | 'privacy';
 type RegexList = Record<RegexOptions, RegExp>;
 
 export const regex : RegexList = {
@@ -27,6 +27,7 @@ export const regex : RegexList = {
     required_phone : new RegExp(/^\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{3,4}[-.\s]?\d{4,6}$/),
     optional_date_answer : new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$|^$/),
     required_date_answer : new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/),
+    privacy: new RegExp(/^true$/), 
 }
 
 export const styles = {
