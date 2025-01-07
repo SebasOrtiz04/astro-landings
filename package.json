@@ -36,7 +36,10 @@
     "axios": "^1.7.9",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+<<<<<<< HEAD
     "markdown-to-jsx": "^7.7.2",
+=======
+>>>>>>> a92383aad063e5617e16f908f29fc78ed5150605
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "unpic": "^3.22.0"
