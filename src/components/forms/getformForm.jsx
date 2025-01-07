@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import formApi from "~/services/formsApi";
 import { regex, removeEmptyKeys, sendInitialState } from "~/utils/forms";
+import PrivacyModal from "./privacyModal";
 
 // Constantes ---------------------------------------------------------------------------------
 
@@ -10,7 +11,7 @@ import { regex, removeEmptyKeys, sendInitialState } from "~/utils/forms";
 const inputStyles = "w-full field-input border-2 border-secondary rounded-xl p-3 text-secondary h-12"
 const labelStyles = "ml-1"
 const errorStyles = "text-red-500 ml-2 text-xs"
-const formInitialState = {full_name: '',phone: '', date_answer: ''}
+const formInitialState = {full_name: '',phone: '', date_answer: '', privacy: false}
 const formErrorsInitialState = {
     full_name: {
         status:true,
@@ -26,7 +27,12 @@ const formErrorsInitialState = {
         status:true,
         regex: regex.required_date_answer,
         message:'Ingrese uan fecha válida'
-    }
+    },
+    privacy: {
+        status:false,
+        regex: regex.privacy,
+        message:'Aceptar la política de provacidad es obligatorio'
+    },
 }
 
 
@@ -205,7 +211,20 @@ return (
                     </Stack>
                 </fieldset>
 
-            </form>
+                <PrivacyModal/>
+
+                <Stack error={formErrors.date_answer} value={form.date_answer}>
+                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">* He leido y acepto la politica de privacidad
+                    <input type='checkbox'
+                    title="He leido y acepto la política de privacidad"
+                    onChange={(e) => setForm({...form, privacy: e.target.checked})}
+                    checked={form.privacy}
+                    className=" form-checkbox ml-5"
+                    />
+                    </label>
+                </Stack>
+
+
                 <button type="submit" onClick={handleSend} className="mt-5 btn-secondary w-[100%] focus:outline-none focus:ring-0">
                     {
                         send.loading 
@@ -213,6 +232,7 @@ return (
                         : <Icon icon="tabler:send" width="24" height="24" />}
                     Enviar
                 </button>
+            </form>
         </div>
     </section>
 )
