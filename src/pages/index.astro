@@ -1,5 +1,5 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 // import Note from '~/components/widgets/Note.astro';
@@ -30,7 +30,7 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:contract',
       },
-      { text: 'Ver servicios', href: '#features' },
+      { text: 'Ver servicios', href: '#Productos' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
@@ -52,9 +52,10 @@ const metadata = {
 
   <!-- Productos ******************* -->
   <Features2
-  title="Explore our diverse templates"
-  subtitle="Discover our selection below to streamline and elevate your projects."
-  columns={4}
+  id="Productos"
+  title="Loza disponible"
+  subtitle="Esta es la variedad de loza que tenemos para ti."
+  columns={3}
   items={[
     {
       title: 'Plato Trinche',
