@@ -23,17 +23,17 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
   <!-- Hero2 Widget ******************* -->
 
   <Hero
-    tagline="Inflables Orca"
     title="¡Rentame para tus fiestas!"
     subtitle="Renta este divertido inflable de 6m x 4m a tan solo $850.00 MXN."
     actions={[
-      { variant: 'secondary', text: 'Contáctanos', href: whatsAppUrl, icon: 'tabler:brand-whatsapp', target: '_blank' },
+      { variant: 'primary', text: 'Contáctanos', href: whatsAppUrl, icon: 'tabler:brand-whatsapp', target: '_blank'},
       // { text: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61569751381424', icon: 'tabler:brand-facebook', target: '_blank' },
     ]}
     image={{
       src: rampaImg,
       alt: 'Inflable Rampa',
     }}
+
   />
   <!-- Content Widget **************** -->
 
@@ -69,7 +69,7 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     <Fragment slot="content">Solo aparta y nos hacemos cargo del resto</Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <!-- <div class="absolute inset-0 bg-accent dark:bg-transparent"></div> -->
     </Fragment>
   </Content>
 
@@ -121,6 +121,8 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     icon="tabler:brand-whatsapp"
     href={whatsAppUrl}
     target="_blank"
+    variant='primary'
+    class='animate-bounce-10s'
     />
   </div>
 
