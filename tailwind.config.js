@@ -22,6 +22,8 @@ export default {
       animation: {
         fade: 'fadeInUp 1s both',
         spin360: 'spin360 1s linear infinite',
+        pulse: 'pulse 1s linear infinite',
+        'bounce-10s': 'bounceWithDelay 8s infinite',
       },
 
       keyframes: {
@@ -32,6 +34,18 @@ export default {
         spin360: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        pulse: {
+          '0%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+          '100%': { opacity: 1 },
+        },
+        bounceWithDelay: {
+          '0%': { transform: 'translateY(0)' },
+          '3%': { transform: 'translateY(-20%)' }, // Salto breve
+          '6%': { transform: 'translateY(0)' },
+          '9%': { transform: 'translateY(-20%)' }, // Salto breve
+          '12%, 100%': { transform: 'translateY(0)' },
         },
       },
     },

@@ -1,7 +1,7 @@
 ---
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import Button from '~/components/ui/Button.astro';
-import logoImage from '~/assets/images/logo.svg';
+import logoImage from '~/assets/images/logo_orca.svg';
 import { getHomePermalink } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 import { Image } from 'astro:assets';
@@ -65,8 +65,10 @@ const {
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
-      <a class="flex items-center" href={getHomePermalink()}>
-        <Image src={logoImage} alt="logo" width="100" height="100" class="w-[150px] md:w-[200px] dark:text-white" />
+      <a class="flex items-center text-xl font-bold text-secondary gap-1" href={getHomePermalink()}>
+        <Image src={logoImage} alt="logo" width="100" height="100" class="w-[50px]"  />
+        Inflables
+        <span class="hidden md:flex"> Orca</span>
       </a>
       <div class="items-center flex justify-between w-auto md:hidden">
         <div class="flex">
