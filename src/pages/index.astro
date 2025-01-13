@@ -4,11 +4,10 @@ import Layout from '~/layouts/LandingLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 // import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import ShowTableWare from '~/components/widgets/ShowTableWare.astro';
 
 const metadata = {
   title: 'Renta de loza — ORCA',
@@ -49,7 +48,7 @@ const metadata = {
   </Hero>
 
   <!-- Productos ******************* -->
-  <Features2
+  <ShowTableWare
   id="Productos"
   title="Loza disponible"
   subtitle="Esta es la variedad de loza que tenemos para ti."
@@ -57,44 +56,57 @@ const metadata = {
   items={[
     {
       title: 'Plato Trinche',
-      description:
-        'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-      icon: 'tabler:school',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
     {
-      title: 'Plato Hondo',
-      description:
-        'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-      icon: 'tabler:home-star',
+      title: 'Plato Trinche',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
     {
-      title: 'Tazón',
-      description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-      icon: 'tabler:bowl',
+      title: 'Plato Trinche',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
     {
-      title: 'Tazas',
-      description:
-        'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-      icon: 'tabler:cup',
+      title: 'Plato Trinche',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
     {
-      title: 'Plato entremes',
-      description:
-        'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-      icon: 'tabler:article',
+      title: 'Plato Trinche',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
     {
-      title: 'Cubiertos',
-      description:
-        'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-      icon: 'tabler:tools-kitchen',
-    },
-    {
-      title: 'Vasos',
-      description:
-        'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-      icon: 'tabler:arrow-big-up-lines',
+      title: 'Plato Trinche',
+      icon: 'tabler:currency-dollar',
+      image: {
+        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+        alt: 'Magnet attracting screws. Lead generation landing page demo',
+      },
+      description: '4 MXN'
     },
   ]}
 />
@@ -105,9 +117,8 @@ const metadata = {
 
   <Features
     id="features"
-    tagline="Features"
+    tagline="Diferenciador"
     title="¿Por qué rentar con nosotros?"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
         title: 'Astro + Tailwind CSS Integration',
@@ -180,16 +191,6 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Steps image',
     }}
-  />
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
   />
 
   <!-- FAQs Widget ******************* -->
