@@ -17,7 +17,6 @@ const {
 {
   items && (
     <div class={twMerge('grid gap-8 gap-x-12 sm:gap-y-8 ', containerClass)}>
-      <div>
       {items.map(({ title, description, classes: itemClasses = {} }) => (
         <div
           class={twMerge(
@@ -36,7 +35,6 @@ const {
 
         </div>
       ))}
-    </div>
     </div>
   )
 }
