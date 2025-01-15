@@ -2,7 +2,7 @@
 import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import GetformForm from '~/components/forms/getformForm.jsx';
+import GetformForm from '~/components/forms/getformForm.jsx'; 
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -218,6 +218,6 @@ const metadata = {
       waste more time! :P
     </Fragment>
   </CallToAction>
+  
+  <GetformForm client:load />
 </Layout>
-
-<!-- <GetformForm client:load /> -->
