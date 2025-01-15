@@ -184,7 +184,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.phone} value={form.phone}>
-                        <label className={labelStyles} id='phone-label' htmlFor="phone">Whatsapp * </label>
+                        <label className={labelStyles} id='phone-label' htmlFor="phone">Whatsapp <span className="text-red-500">*</span> </label>
                         <input
                             type="text"
                             name="phone"
@@ -198,7 +198,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.date_answer} value={form.date_answer}>
-                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes * </label>
+                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes <span className="text-red-500">*</span></label>
                         <input
                             type="date"
                             value={form.date_answer}
@@ -213,19 +213,19 @@ return (
 
                 <PrivacyModal/>
 
-                <Stack error={formErrors.date_answer} value={form.date_answer}>
-                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">* He leido y acepto la politica de privacidad
+                <div error={formErrors.date_answer} value={form.date_answer} className="flex items-center">
+                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">He leido y acepto la politica de privacidad <span className="text-red-500">*</span> </label>
                     <input type='checkbox'
-                    title="He leido y acepto la política de privacidad"
-                    onChange={(e) => setForm({...form, privacy: e.target.checked})}
-                    checked={form.privacy}
-                    className=" form-checkbox ml-5"
+                        title="He leido y acepto la política de privacidad"
+                        onChange={(e) => setForm({...form, privacy: e.target.checked})}
+                        checked={form.privacy}
+                        className=" form-checkbox ml-2 md:ml-3"
                     />
-                    </label>
-                </Stack>
+                    
+                </div>
 
 
-                <button type="submit" onClick={handleSend} className="flex items-center justify-center mt-5 btn-secondary w-full focus:outline-none focus:ring-0 text-2xl">
+                <button type="submit" onClick={handleSend} className="flex items-center justify-center mt-5 btn-secondary w-full focus:outline-none focus:ring-0 md:text-lg">
                     {
                         send.loading
                         ? <Icon icon="tabler:loader-2" width="24" height="24" className='animate-spin' />
