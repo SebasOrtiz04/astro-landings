@@ -9,7 +9,7 @@ import PrivacyModal from "./privacyModal";
 
 
 const inputStyles = "w-full field-input border-2 border-secondary rounded-xl p-3 text-secondary h-12"
-const labelStyles = "ml-1"
+const labelStyles = "ml-1.5 font-bold"
 const errorStyles = "text-red-500 ml-2 text-xs"
 const formInitialState = {full_name: '',phone: '', date_answer: '', privacy: false}
 const formErrorsInitialState = {
@@ -156,20 +156,20 @@ return (
         />
         
         <h3 className="text-2xl max-w-[500px] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
-        <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] 
+        <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] md:w-[min(90vw,1000px)] 
         border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default">
         
             <form id="contactForm" className="w-full">
                 
                 <fieldset className="flex flex-col gap-3" aria-labelledby='general-data'>
 
-                    <legend id='general-data' className='text-xl mb-5'>
+                    <legend id='general-data' className='text-xl mb-5 font-bold'>
                         Información de contacto
-                        <span className="block text-xs text-default"> (*) Obligatorios</span>    
+                        <span className="block text-xs text-default font-normal"> (*) Obligatorios</span>    
                     </legend>
                     
                     <Stack error={formErrors.full_name} value={form.full_name}>
-                        <label className={labelStyles} htmlFor="full_name" id='full-name-label' > Nombre :</label>
+                        <label className={labelStyles} htmlFor="full_name" id='full-name-label' > Nombre</label>
                         <input 
                             type="text"
                             value={form.full_name}
@@ -184,7 +184,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.phone} value={form.phone}>
-                        <label className={labelStyles} id='phone-label' htmlFor="phone">* Whatsapp : </label>
+                        <label className={labelStyles} id='phone-label' htmlFor="phone">Whatsapp * </label>
                         <input 
                             type="text" 
                             name="phone"
@@ -198,7 +198,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.date_answer} value={form.date_answer}>
-                        <label className={labelStyles} id='date-label' htmlFor="date_answer">* Fecha de interes : </label>
+                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes * </label>
                         <input 
                             type="date" 
                             value={form.date_answer}
@@ -228,7 +228,7 @@ return (
                 <button type="submit" onClick={handleSend} className="mt-5 btn-secondary w-[100%] focus:outline-none focus:ring-0">
                     {
                         send.loading 
-                        ? <Icon icon="tabler:loader-3" width="24" height="24" className='animate-spin' />
+                        ? <Icon icon="tabler:loader-3" width="24" height="24" className='animate-spin p-3' />
                         : <Icon icon="tabler:send" width="24" height="24" />}
                     Enviar
                 </button>
