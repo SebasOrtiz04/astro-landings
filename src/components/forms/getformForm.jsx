@@ -155,9 +155,9 @@ return (
             handleOpen={handleOpen}
         />
 
-        <h3 className="text-2xl max-w-[500px] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
+        <h3 className="text-2xl md:text-2xl w-[min(80vw,400px)] md:w-[min(80vw,900px)] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
         <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] md:w-[min(90vw,1000px)]
-        border-2 border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default">
+        border-2 border-white dark:border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default">
 
             <form id="contactForm" className="w-full">
 
