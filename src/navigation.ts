@@ -117,7 +117,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Contrata', href: whatsAppUrl, target: '_blank', icon:'tabler:brand-whatsapp', variant:'primary' }],
+  // actions: [{ text: 'Contrata', href: whatsAppUrl, target: '_blank', icon:'tabler:brand-whatsapp', variant:'primary' }],
 };
 
 export const footerData = {
