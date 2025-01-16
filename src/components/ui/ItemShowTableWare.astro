@@ -1,0 +1,40 @@
+---
+import type { ItemGrid as Props } from '~/types';
+import { Icon } from 'astro-icon/components';
+import { twMerge } from 'tailwind-merge';
+
+const { items = [], defaultIcon = 'tabler:currency-dollar', classes = {} } = Astro.props;
+
+const {
+  container: containerClass = '',
+  panel: panelClass = '',
+  title: titleClass = '',
+  description: descriptionClass = '',
+  icon: defaultIconClass = 'text-primary',
+} = classes;
+---
+
+{
+  items && (
+    <div class={twMerge('grid gap-8 gap-x-12 sm:gap-y-8 ', containerClass)}>
+      {items.map(({ title, description, classes: itemClasses = {} }) => (
+        <div
+          class={twMerge(
+            'flex justify-between mb-3',
+            panelClass,
+            itemClasses?.panel
+          )}
+        >
+          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+
+          <div class="flex items-">
+            <Icon name={defaultIcon} class={twMerge('w-8 h-8', defaultIconClass, itemClasses?.icon)} />
+
+            <p class={twMerge('text-lg font-semibold', descriptionClass, itemClasses?.description)} set:html={description} />
+          </div>
+
+        </div>
+      ))}
+    </div>
+  )
+}
