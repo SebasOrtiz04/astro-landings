@@ -165,7 +165,7 @@ return (
 
                     <legend id='general-data' className='text-xl mb-5 font-bold'>
                         Información de contacto
-                        <span className="block text-xs text-default font-normal"> (*) Obligatorios</span>
+                        <span className="block text-xs text-default font-normal"> Obligatorios (<span className="text-red-500">*</span>)</span>
                     </legend>
 
                     <Stack error={formErrors.full_name} value={form.full_name}>
