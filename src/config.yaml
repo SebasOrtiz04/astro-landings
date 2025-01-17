@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: LozasOrca
-    template: '%s — Orca'
-  description: "Página de renta de lozas para tus eventos."
+    template: 'Alquirer Orca'
+  description: "Alquila loza elegante y de alta calidad para tus eventos. Ideal para bodas, fiestas y reuniones. Servicio personalizado, entrega puntual y diseños únicos. ¡Haz tu reserva ahora!"
   robots:
     index: true
     follow: true
@@ -24,7 +24,7 @@ metadata:
     type: websites
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
