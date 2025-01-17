@@ -1,9 +1,12 @@
 ---
 import { SITE } from 'astrowind:config';
+import { Image } from 'astro:assets';
+import logoImage from '~/assets/images/logo_orca.svg';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-primary flex items-center gap-2 whitespace-nowrap dark:text-white "
+  aria-label="logo"
+  >
+  <Image src={logoImage} alt="logo de renta de inflables Orca" width="100" height="100" class="w-[50px]"  />{SITE?.name}
 </span>

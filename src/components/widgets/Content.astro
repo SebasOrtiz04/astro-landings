@@ -17,7 +17,6 @@ const {
   image = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
-
   id,
   isDark = false,
   classes = {},
@@ -80,6 +79,7 @@ const {
                   width={500}
                   height={500}
                   widths={[400, 768]}
+                  aria-label={image?.alt}
                   sizes="(max-width: 768px) 100vw, 432px"
                   layout="responsive"
                   {...image}

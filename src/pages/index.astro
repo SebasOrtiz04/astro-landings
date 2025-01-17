@@ -39,6 +39,8 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
 
   <Content
     isReversed
+    title='Proceso de renta'
+    subtitle='¿Cómo rentar el inflable?'
     isAfterContent
     items={[
       {
@@ -115,6 +117,42 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     ]}
   />
 
+  
+  <!-- Steps Widget ****************** -->
+  <Steps
+  title="Para rentar el inflable sigue los siguientes pasos."
+  items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
+        description:
+          "Mandanos mensaje por whatsapp o dejanos tu contacto y fecha de interes y nos pondremos en contacto con tigo.",
+          icon: 'tabler:brand-whatsapp',
+        },
+      {
+        title: 'Paso 2: <span class="font-medium">Verifica disponibilidad</span>',
+        description:
+          "Confirma la disponibilidad para el día de tu fiesta.",
+          icon: 'tabler:calendar-check',
+        },
+      {
+        title: 'Paso 3: <span class="font-medium">Aparta la fecha</span>',
+        description:
+          'Tenemos pago con efectivo, y transferencia. Elije la que mejor te acomode',
+          icon: 'tabler:paywall',
+        },
+      {
+        title: 'Todo listo para tu fiesta!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: rampaImg2,
+      alt: 'Inflable Rampa con castillo a la renta',
+    }}
+  />
+  
+  <GetFormForm client:load/>
+  
   <div class="flex flex-col items-center justify-center h-40">
     <Button 
     text='Contactar por WhatsApp'
@@ -125,40 +163,4 @@ const whatsAppUrl = 'https://wa.me/522221275134?text=Hola%20Estaba%20en%20tu%20s
     class='animate-bounce-10s'
     />
   </div>
-
-  <!-- Steps Widget ****************** -->
-  <Steps
-    title="Para rentar el inflable sigue los siguientes pasos."
-    items={[
-      {
-        title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
-        description:
-          "Mandanos mensaje por whatsapp o dejanos tu contacto y fecha de interes y nos pondremos en contacto con tigo.",
-        icon: 'tabler:brand-whatsapp',
-      },
-      {
-        title: 'Paso 2: <span class="font-medium">Verifica disponibilidad</span>',
-        description:
-          "Confirma la disponibilidad para el día de tu fiesta.",
-        icon: 'tabler:calendar-check',
-      },
-      {
-        title: 'Paso 3: <span class="font-medium">Aparta la fecha</span>',
-        description:
-          'Tenemos pago con efectivo, y transferencia. Elije la que mejor te acomode',
-        icon: 'tabler:paywall',
-      },
-      {
-        title: 'Todo listo para tu fiesta!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: rampaImg2,
-      alt: 'Steps image',
-    }}
-  />
-  
-  <GetFormForm client:load/>
-
 </Layout>
