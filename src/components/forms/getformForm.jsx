@@ -172,6 +172,7 @@ return (
                         <label className={labelStyles} htmlFor="full_name" id='full-name-label' > Nombre :</label>
                         <input 
                             type="text"
+                            id='full_name'
                             value={form.full_name}
                             onChange={(e) => setForm({...form, full_name: e.target.value})}
                             name="full_name" 
@@ -188,6 +189,7 @@ return (
                         <input 
                             type="text" 
                             name="phone"
+                            id='phone'
                             value={form.phone}
                             onChange={(e) => setForm({...form, phone: e.target.value})}
                             aria-labelledby="phone-label"
@@ -201,6 +203,7 @@ return (
                         <label className={labelStyles} id='date-label' htmlFor="date_answer">* Fecha de interes : </label>
                         <input 
                             type="date" 
+                            id="date_answer"
                             value={form.date_answer}
                             onChange={(e) => setForm({...form, date_answer: e.target.value})}
                             aria-labelledby="date-label"
@@ -214,9 +217,10 @@ return (
                 <PrivacyModal/>
 
                 <Stack error={formErrors.date_answer} value={form.date_answer}>
-                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">* He leido y acepto la politica de privacidad
+                    <label className={`${labelStyles} text-xs`} id='privacy-label' htmlFor="privacy">* He leido y acepto la politica de privacidad
                     <input type='checkbox'
                     title="He leido y acepto la política de privacidad"
+                    id="privacy"
                     onChange={(e) => setForm({...form, privacy: e.target.checked})}
                     checked={form.privacy}
                     className=" form-checkbox ml-5"
@@ -230,7 +234,7 @@ return (
                         send.loading 
                         ? <Icon icon="tabler:loader-3" width="24" height="24" className='animate-spin' />
                         : <Icon icon="tabler:send" width="24" height="24" />}
-                    Enviar
+                    Enviar Formulario
                 </button>
             </form>
         </div>

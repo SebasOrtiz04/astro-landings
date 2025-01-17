@@ -181,9 +181,11 @@ export const footerData = {
   footNote: `
   <div class="flex flex-col md:flex-row gap-2 items-baseline text-sm mr-4 dark:text-muted">
     Hecho con ❤️ por 
-    <a class="text-blue-600 underline dark:text-muted" target='_blanck' href="https://sebas.mistli.com.mx/"> Sebas Ortiz</a> 
+    <a class="text-blue-secondary underline dark:text-muted" target='_blanck' href="https://sebas.mistli.com.mx/"> Sebas Ortiz</a> 
+    basado en la plantilla astrowind MIT de 
+    <a class="text-blue-secondary flex items-baseline gap-2 underline dark:text-muted" target='_blanck' href="https://onwidget.com/"> 
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    basado en la plantilla astrowind MIT de <a class="text-blue-600 underline dark:text-muted" target='_blanck' href="https://onwidget.com/"> onWidget</a> .
+    onWidget</a> .
   </div>
   `,
 };
