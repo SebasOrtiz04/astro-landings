@@ -155,7 +155,7 @@ return (
             handleOpen={handleOpen}
         />
 
-        <h3 className="text-2xl md:text-2xl w-[min(80vw,400px)] md:w-[min(80vw,900px)] font-bold my-10 text-center px-5">Déjanos la información de tu evento y te contactaremos</h3>
+        <h3 className="font-bold leading-tighter tracking-tighter font-heading text-heading text-3xl my-10 text-center">Déjanos la información de tu evento y te contactaremos</h3>
         <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 w-[min(90vw,500px)] md:w-[min(90vw,1000px)]
         border-2 border-white dark:border-secondary rounded-xl mb-10 shadow-md text-secondary dark:text-default">
 
