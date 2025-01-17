@@ -1,8 +1,8 @@
 ---
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
-
 import type { Hero as Props } from '~/types';
+import Gallery from './Gallery.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -12,6 +12,7 @@ const {
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  galleryItems = [],
 
   id,
   bg = await Astro.slots.render('bg'),
@@ -94,6 +95,16 @@ const {
           )
         }
       </div>
+      {
+        galleryItems && (
+          <div
+            class="intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+          >
+            <Gallery columns={3} items={galleryItems} />
+            
+          </div>
+      )
+      }
     </div>
   </div>
 </section>

@@ -7,7 +7,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/LandingLayout.astro';
 import ShowTableWare from '~/components/widgets/ShowTableWare.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Gallery from '~/components/widgets/Gallery.astro';
+
 
 const metadata = {
   title: 'Alquiler Orca',
@@ -27,75 +27,31 @@ const metadata = {
         icon: 'tabler:contract',
       }
     ]}
+    galleryItems={[
+      {
+        title: 'Plato Trinche',
+        image: {
+          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+          alt: 'Magnet attracting screws. Lead generation landing page demo',
+        },
+        description: '4 MXN'
+      },
+
+      {
+        title: 'Plato Trinche',
+        image: {
+          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+          alt: 'Magnet attracting screws. Lead generation landing page demo',
+        },
+        description: '4 MXN'
+      },
+    ]}
   >
     <Fragment slot="title">
       ¿Te hace falta loza<span class="hidden xl:inline"> para tus eventos</span>?
       <span class="block"> ¡<span class="text-accent highlight">Orca</span> te la puede rentar!</span>
     </Fragment>
   </Hero>
-
-  <!-- Galería de fotos -->
-
-  <Gallery
-  id="Productos"
-  columns={3}
-  items={[
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-    {
-      title: 'Plato Trinche',
-      icon: 'tabler:currency-dollar',
-      image: {
-        src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Magnet attracting screws. Lead generation landing page demo',
-      },
-      description: '4 MXN'
-    },
-  ]}
-/>
 
   <!-- Productos ******************* -->
   <ShowTableWare
@@ -249,7 +205,7 @@ const metadata = {
       },
     ]}
   />
-    
+
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
@@ -268,4 +224,3 @@ const metadata = {
   </CallToAction>
 
 </Layout>
- 
