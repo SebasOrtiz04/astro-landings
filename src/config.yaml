@@ -1,6 +1,6 @@
 site:
   name: LozasOrca
-  site: 'https://astrowind.vercel.app'
+  site: 'https://landing-loza.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: LozasOrca
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    template: '%s — Orca'
+  description: "Página de renta de lozas para tus eventos."
   robots:
     index: true
     follow: true
@@ -21,11 +21,7 @@ metadata:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
-    type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+    type: websites
 
 i18n:
   language: en
