@@ -126,6 +126,12 @@ interface Social {
   href?: string;
 }
 
+export interface GalleryItem {
+  title?: string;
+  description?: string;
+  image?: Image;
+}
+
 export interface Stat {
   amount?: number | string;
   title?: string;
@@ -217,6 +223,7 @@ export interface Hero extends Omit<Headline, 'classes'>, Omit<Widget, 'isDark' |
   content?: string;
   actions?: string | CallToAction[];
   image?: string | unknown;
+  galleryItems?: Array<GalleryItem>;
 }
 
 export interface Team extends Omit<Headline, 'classes'>, Widget {

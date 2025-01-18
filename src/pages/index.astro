@@ -1,16 +1,16 @@
 ---
-import Layout from '~/layouts/LandingLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import GetformForm from '~/components/forms/getformForm.jsx'; 
-import Features from '~/components/widgets/Features.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import GetformForm from '~/components/forms/getformForm.jsx';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/LandingLayout.astro';
 import ShowTableWare from '~/components/widgets/ShowTableWare.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
 
 const metadata = {
-  title: 'Renta de loza — ORCA',
+  title: 'Alquiler Orca',
   ignoreTitleTemplate: true,
 };
 ---
@@ -27,7 +27,32 @@ const metadata = {
         icon: 'tabler:contract',
       }
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    galleryItems={[
+      {
+        title: 'Plato Trinche',
+        image: {
+          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+          alt: 'Magnet attracting screws. Lead generation landing page demo',
+        },
+        description: '4 MXN'
+      },
+      {
+        title: 'Plato Trinche',
+        image: {
+          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+          alt: 'Magnet attracting screws. Lead generation landing page demo',
+        },
+        description: '4 MXN'
+      },
+      {
+        title: 'Plato Trinche',
+        image: {
+          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+          alt: 'Magnet attracting screws. Lead generation landing page demo',
+        },
+        description: '4 MXN'
+      },
+    ]}
   >
     <Fragment slot="title">
       ¿Te hace falta loza<span class="hidden xl:inline"> para tus eventos</span>?
@@ -187,7 +212,7 @@ const metadata = {
       },
     ]}
   />
-    
+
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
@@ -206,4 +231,3 @@ const metadata = {
   </CallToAction>
 
 </Layout>
- 

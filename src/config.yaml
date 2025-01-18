@@ -1,6 +1,6 @@
 site:
   name: LozasOrca
-  site: 'https://astrowind.vercel.app'
+  site: 'https://landing-loza.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: LozasOrca
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    template: 'Alquirer Orca'
+  description: "Alquila loza elegante y de alta calidad para tus eventos. Ideal para bodas, fiestas y reuniones. Servicio personalizado, entrega puntual y diseños únicos. ¡Haz tu reserva ahora!"
   robots:
     index: true
     follow: true
@@ -21,14 +21,10 @@ metadata:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
-    type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+    type: websites
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
