@@ -1,5 +1,5 @@
 site:
-  name: LozasOrca
+  name: Alquiler Orca
   site: 'https://landing-loza.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: LozasOrca
+    default: Alquiler Orca
     template: 'Alquirer Orca'
   description: "Alquila loza elegante y de alta calidad para tus eventos. Ideal para bodas, fiestas y reuniones. Servicio personalizado, entrega puntual y diseños únicos. ¡Haz tu reserva ahora!"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: LozasOrca
+    site_name: Alquiler Orca
     images:
       - url: '~/assets/images/default.png'
         width: 1200
