@@ -60,17 +60,6 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Productos ******************* -->
-  <ShowTableWare
-    id="Productos"
-    title="Loza disponible"
-    subtitle="Esta es la variedad de loza que tenemos para ti."
-    columns={3}
-    items={priceTableWare}
-/>
-
-  <!-- <Note /> -->
-
   <!-- Features Widget *************** -->
 
   <Features
@@ -150,6 +139,17 @@ const metadata = {
       alt: 'Steps image',
     }}
   />
+
+  <!-- Productos ******************* -->
+  <ShowTableWare
+    id="Productos"
+    title="Loza disponible"
+    subtitle="Esta es la variedad de loza que tenemos para ti."
+    columns={3}
+    items={priceTableWare}
+  />
+
+  <!-- Formulario -->
 
   <div id="formulario">
     <GetformForm client:load />
