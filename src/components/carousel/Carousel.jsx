@@ -15,7 +15,7 @@ const Carousel = ({ slides }) => {
   }, [currentPhoto, slides.length]);
 
   return (
-    <div className="w-[60%] m-auto">
+    <div className="mx-auto rounded-md w-full">
       <div className="overflow-hidden relative">
         <div
           className="flex transition ease-out duration-300"

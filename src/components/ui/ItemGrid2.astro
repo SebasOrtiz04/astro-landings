@@ -3,7 +3,8 @@ import type { ItemGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
-import Image from '~/components/common/Image.astro';
+import Carousel from '~/components/carousel/Carousel.jsx';
+import { carouselPhotos } from '~/data/carousel-photos';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -47,15 +48,7 @@ const {
                 {typeof image === 'string' ? (
                   <Fragment set:html={image} />
                 ) : (
-                  <Image
-                    class="mx-auto rounded-md w-full"
-                    widths={[400, 768, 1024, 2040]}
-                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                    loading="eager"
-                    width={1024}
-                    height={576}
-                    {...image}
-                  />
+                  <Carousel slides={carouselPhotos} client:load />
                 )}
               </div>
             )
