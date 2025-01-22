@@ -1,10 +1,6 @@
-export interface Razones {
-  title: string;
-  description: string;
-  icon: string;
-}
+import type { Item } from "~/types";
 
-export const razones: Array<Razones> = [
+export const razones: Array<Item> = [
   {
     title: 'Facilidad de reserva en linea',
     description:

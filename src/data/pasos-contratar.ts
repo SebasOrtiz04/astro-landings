@@ -1,10 +1,6 @@
-export interface PasosContratar {
-  title: string;
-  description?: string;
-  icon: string;
-}
+import type { Item } from "~/types";
 
-export const pasosContratar: Array<PasosContratar> = [
+export const pasosContratar: Array<Item> = [
   {
     title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
     description:

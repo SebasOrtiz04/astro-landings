@@ -1,11 +1,7 @@
-//Definicion de tipo para describir los precios de los productos
-export interface PriceTableWare {
-  title: string;
-  description: string;
-}
+import type { Item } from "~/types";
 
 //Definicion lista de precios
-export const priceTableWare: Array<PriceTableWare> = [
+export const priceTableWare: Array<Item> = [
   { title: 'Plato tinche', description: '12.00 MXN' },
   { title: 'Plato hondo', description: '12.00 MXN' },
   { title: 'Plato entremes', description: '12.00 MXN' },
