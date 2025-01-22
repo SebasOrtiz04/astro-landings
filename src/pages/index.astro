@@ -10,8 +10,6 @@ import Steps from '~/components/widgets/Steps.astro';
 import { priceTableWare } from '~/data/precios-lozas';
 import { razones } from '~/data/razones-nosotros'
 import { pasosContratar } from '~/data/pasos-contratar'
-import { carouselPhotos } from '~/data/carousel-photos';
-import Carousel from '~/components/carousel/Carousel';
 
 
 const metadata = {
@@ -63,10 +61,6 @@ const metadata = {
       <span class="block"><span class="text-accent highlight">Alquila</span> la mejor bajilla con nosotros</span>
     </Fragment>
   </Hero>
-
-  <!-- Carousel Widget *************** -->
-  <Carousel slides={carouselPhotos} client:load  />
-  
   
   <!-- Features Widget *************** -->
 
