@@ -130,6 +130,7 @@ export interface GalleryItem {
   title?: string;
   description?: string;
   image?: Image;
+  slides?: Array<Image>
 }
 
 export interface Stat {
