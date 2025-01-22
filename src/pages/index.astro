@@ -10,6 +10,8 @@ import Steps from '~/components/widgets/Steps.astro';
 import { priceTableWare } from '~/data/precios-lozas';
 import { razones } from '~/data/razones-nosotros'
 import { pasosContratar } from '~/data/pasos-contratar'
+import { carouselPhotos } from '~/data/carousel-photos';
+import Carousel from '~/components/carousel/Carousel';
 
 
 const metadata = {
@@ -62,6 +64,10 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <!-- Carousel Widget *************** -->
+  <Carousel slides={carouselPhotos} client:load  />
+  
+  
   <!-- Features Widget *************** -->
 
   <Features
