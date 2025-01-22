@@ -10,6 +10,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import { priceTableWare } from '~/data/precios-lozas';
 import { razones } from '~/data/razones-nosotros'
 import { pasosContratar } from '~/data/pasos-contratar'
+import { carouselPhotos } from '~/data/carousel-photos';
 
 
 const metadata = {
@@ -29,32 +30,7 @@ const metadata = {
         href: '#formulario',
       }
     ]}
-    galleryItems={[
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-    ]}
+    galleryItems={carouselPhotos}
   >
     <Fragment slot="title">
       ¿Tienes un evento especial <span class="hidden xl:inline"> en puerta</span>?

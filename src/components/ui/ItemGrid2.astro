@@ -53,6 +53,16 @@ const {
               </div>
             )
           }
+          {image && (
+              <div class="m-auto max-w-5xl mt-5">
+                {typeof image === 'string' ? (
+                  <Fragment set:html={image} />
+                ) : (
+                  <Carousel slides={carouselPhotos} showArrows={false} client:load />
+                )}
+              </div>
+            )
+          }
           {callToAction && (
             <div class="mt-2">
               <Button {...callToAction} />
