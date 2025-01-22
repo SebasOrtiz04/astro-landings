@@ -16,7 +16,7 @@ const Carousel = ({ slides, showArrows }) => {
 
   return (
     <div className="mx-auto rounded-md w-full">
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative rounded-md">
         <div
           className="flex transition ease-out duration-300"
           style={{
@@ -28,7 +28,10 @@ const Carousel = ({ slides, showArrows }) => {
               src={slide.src}
               alt={slide.alt || `Slide ${key + 1}`}
               key={key}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-md"
+              loading="eager"
+              width={1024}
+              height={576}
             />
           ))}
         </div>
