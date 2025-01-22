@@ -48,7 +48,7 @@ const {
                 {typeof image === 'string' ? (
                   <Fragment set:html={image} />
                 ) : (
-                  <Carousel slides={carouselPhotos} showArrows={true} client:load />
+                  <Carousel slides={carouselPhotos} showArrows={false} client:load />
                 )}
               </div>
             )

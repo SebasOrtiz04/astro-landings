@@ -43,7 +43,7 @@ const Carousel = ({ slides, showArrows }) => {
             </button>
           </div>
         }
-        <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+        <div className="absolute bottom-0 py-2 flex justify-center gap-3 w-full">
           {slides.map((s, i) => {
             return (
               <div
@@ -51,7 +51,7 @@ const Carousel = ({ slides, showArrows }) => {
                   setCurrentPhoto(i);
                 }}
                 key={"circle" + i}
-                className={`rounded-full w-5 h-5 cursor-pointer  ${
+                className={`rounded-full w-4 h-2 cursor-pointer  ${
                   i == currentPhoto ? "bg-white" : "bg-gray-500"
                 }`}
               ></div>
