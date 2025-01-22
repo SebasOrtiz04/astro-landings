@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
 import Carousel from '~/components/carousel/Carousel.jsx';
-import { carouselPhotos } from '~/data/carousel-photos';
+import Image from '../common/Image.astro';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -34,7 +34,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, image, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, image, slides, icon, callToAction, classes: itemClasses = {} }) => (
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -48,17 +48,25 @@ const {
                 {typeof image === 'string' ? (
                   <Fragment set:html={image} />
                 ) : (
-                  <Carousel slides={carouselPhotos} showArrows={false} client:load />
+                  <Image
+                    class="mx-auto rounded-md w-full"
+                    widths={[400, 768, 1024, 2040]}
+                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                    loading="eager"
+                    width={1024}
+                    height={576}
+                    {...image}
+                  />
                 )}
               </div>
             )
           }
-          {image && (
+          {slides && (
               <div class="m-auto max-w-5xl mt-5">
                 {typeof image === 'string' ? (
                   <Fragment set:html={image} />
                 ) : (
-                  <Carousel slides={carouselPhotos} showArrows={false} client:load />
+                  <Carousel slides={slides} showArrows={false} client:load />
                 )}
               </div>
             )
