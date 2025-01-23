@@ -3,7 +3,8 @@ import type { ItemGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
-import Image from '~/components/common/Image.astro';
+import Carousel from '~/components/carousel/Carousel.jsx';
+import Image from '../common/Image.astro';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -33,7 +34,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, image, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, image, slides, icon, callToAction, classes: itemClasses = {} }) => (
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -56,6 +57,16 @@ const {
                     height={576}
                     {...image}
                   />
+                )}
+              </div>
+            )
+          }
+          {slides && (
+              <div class="m-auto max-w-5xl mt-5">
+                {typeof image === 'string' ? (
+                  <Fragment set:html={image} />
+                ) : (
+                  <Carousel slides={slides} showArrows={false} client:load />
                 )}
               </div>
             )

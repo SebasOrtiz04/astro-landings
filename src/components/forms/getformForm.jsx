@@ -172,6 +172,7 @@ return (
                         <label className={labelStyles} htmlFor="full_name" id='full-name-label' > Nombre</label>
                         <input
                             type="text"
+                            id='full_name'
                             value={form.full_name}
                             onChange={(e) => setForm({...form, full_name: e.target.value})}
                             name="full_name"
@@ -188,6 +189,7 @@ return (
                         <input
                             type="text"
                             name="phone"
+                            id="phone"
                             value={form.phone}
                             onChange={(e) => setForm({...form, phone: e.target.value})}
                             aria-labelledby="phone-label"
@@ -201,6 +203,7 @@ return (
                         <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes <span className="text-red-500">*</span></label>
                         <input
                             type="date"
+                            id="date_answer"
                             value={form.date_answer}
                             onChange={(e) => setForm({...form, date_answer: e.target.value})}
                             aria-labelledby="date-label"

@@ -7,6 +7,10 @@ import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/LandingLayout.astro';
 import ShowTableWare from '~/components/widgets/ShowTableWare.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import { priceTableWare } from '~/data/precios-lozas';
+import { razones } from '~/data/razones-nosotros'
+import { pasosContratar } from '~/data/pasos-contratar'
+import { carouselPhotos } from '~/data/carousel-photos';
 
 
 const metadata = {
@@ -22,43 +26,37 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Rentar Loza',
+        text: 'Solicitar información',
         href: '#formulario',
-        icon: 'tabler:contract',
       }
     ]}
-    galleryItems={[
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        image: {
-          src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-          alt: 'Magnet attracting screws. Lead generation landing page demo',
-        },
-        description: '4 MXN'
-      },
-    ]}
+    galleryItems={carouselPhotos}
   >
     <Fragment slot="title">
-      ¿Te hace falta loza<span class="hidden xl:inline"> para tus eventos</span>?
-      <span class="block"> ¡<span class="text-accent highlight">Orca</span> te la puede rentar!</span>
+      ¿Tienes un evento especial <span class="hidden xl:inline"> en puerta</span>?
+      <span class="block"><span class="text-accent highlight">Alquila</span> la mejor bajilla con nosotros</span>
     </Fragment>
   </Hero>
+  
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Diferenciador"
+    title="¿Por qué rentar con nosotros?"
+    items={razones}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="¿Cómo contratar nuestro servicio?"
+    items={pasosContratar}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
 
   <!-- Productos ******************* -->
   <ShowTableWare
@@ -66,107 +64,10 @@ const metadata = {
     title="Loza disponible"
     subtitle="Esta es la variedad de loza que tenemos para ti."
     columns={3}
-    items={[
-      {
-        title: 'Plato Trinche',
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        description: '4 MXN'
-      },
-      {
-        title: 'Plato Trinche',
-        description: '4 MXN'
-      },
-    ]}
-/>
-
-  <!-- <Note /> -->
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Diferenciador"
-    title="¿Por qué rentar con nosotros?"
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
+    items={priceTableWare}
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="¿Cómo contratar nuestro servicio?"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  <!-- Formulario -->
 
   <div id="formulario">
     <GetformForm client:load />

@@ -130,6 +130,7 @@ export interface GalleryItem {
   title?: string;
   description?: string;
   image?: Image;
+  slides?: Array<Image>
 }
 
 export interface Stat {
@@ -145,6 +146,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  slides?: Array<Image>
 }
 
 export interface Price {
@@ -270,7 +272,7 @@ export interface Faqs extends Omit<Headline, 'classes'>, Widget {
 
 export interface Steps extends Omit<Headline, 'classes'>, Widget {
   items: Array<{
-    title: string;
+    title?: string;
     description?: string;
     icon?: string;
     classes?: Record<string, string>;
