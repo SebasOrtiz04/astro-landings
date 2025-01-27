@@ -6,6 +6,10 @@ const ArrowStyle = "bg-primary text-white rounded-full w-5 h-5 p-2 md:w-10 md:h-
 const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
   //Variable para el indice del slide actual
   const [currentPhoto, setCurrentPhoto] = useState(0);
+  const [dynamicInterval, setDynamicInterval] = useState(interval); // Estado para intervalo dinámico
+
+  const [touchStart, setTouchStart] = useState(null); // Posición inicial del toque
+  const [touchEnd, setTouchEnd] = useState(null);  //Posición final del toque 
 
   //Función para cambiar el slide anterior
   const previousPhoto = useCallback(() => {
@@ -23,14 +27,57 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
     
     const timer = setInterval(() => { 
       nextPhoto();
-    },interval)
+    },dynamicInterval)
 
     //Limpieza del intervalo
     return () => clearInterval(timer);
   }, [autoPlay, interval, nextPhoto]);
 
+  //Se agrega funcion para swipper en dispositivos móviles
+   // Manejo del inicio del toque
+   const handleTouchStart = (e) => {
+    if (window.innerWidth >= 768) return; // Solo habilitar en móviles
+    setTouchStart(e.touches[0].clientX); // Posición inicial en X
+  };
+
+  // Manejo del movimiento del toque
+  const handleTouchMove = (e) => {
+    if (window.innerWidth >= 768) return; // Solo habilitar en móviles
+    setTouchEnd(e.touches[0].clientX); // Actualizar la posición final en X
+  };
+
+  // Manejo del final del toque
+  const handleTouchEnd = () => {
+    if (window.innerWidth >= 768 || touchStart === null || touchEnd === null) return; // Solo móviles y si hay datos válidos
+
+    // Determinar la dirección del deslizamiento
+    const swipeDistance = touchStart - touchEnd;
+    const minSwipeDistance = 50; // Distancia mínima para detectar un deslizamiento
+
+    if (swipeDistance > minSwipeDistance) {
+      // Deslizó hacia la izquierda (siguiente foto)
+      nextPhoto();
+    } else if (swipeDistance < -minSwipeDistance) {
+      // Deslizó hacia la derecha (foto anterior)
+      previousPhoto();
+    }
+
+    setDynamicInterval(6000); // Aumenta el intervalo temporalmente
+    setTimeout(() => {
+      setDynamicInterval(interval); // Vuelve al intervalo original después de 6 segundos
+    }, 6000);
+
+    // Resetear valores
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   return (
-    <div className="mx-auto rounded-md w-full">
+    <div className="mx-auto rounded-md w-full"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="overflow-hidden relative rounded-md">
         <div
           className="flex transition ease-out duration-300"
