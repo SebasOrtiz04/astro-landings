@@ -9,7 +9,15 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
   const [dynamicInterval, setDynamicInterval] = useState(interval); // Estado para intervalo dinámico
 
   const [touchStart, setTouchStart] = useState(null); // Posición inicial del toque
-  const [touchEnd, setTouchEnd] = useState(null);  //Posición final del toque 
+  const [touchEnd, setTouchEnd] = useState(null);  //Posición final del toque
+
+  //Funcion cuando se hace un deslizamiento manual
+  const slowDownInterval  = () => {
+    setDynamicInterval(6000); // Aumenta el intervalo temporalmente
+    setTimeout(() => {
+      setDynamicInterval(interval); // Vuelve al intervalo original después de 6 segundos
+    }, 6000);
+  };
 
   //Función para cambiar el slide anterior
   const previousPhoto = useCallback(() => {
@@ -62,11 +70,7 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
       previousPhoto();
     }
 
-    setDynamicInterval(6000); // Aumenta el intervalo temporalmente
-    setTimeout(() => {
-      setDynamicInterval(interval); // Vuelve al intervalo original después de 6 segundos
-    }, 6000);
-
+    slowDownInterval (); // Llamar a la función de deslizamiento
     // Resetear valores
     setTouchStart(null);
     setTouchEnd(null);
