@@ -1,18 +1,33 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 const ArrowStyle = "bg-primary text-white rounded-full w-5 h-5 p-2 md:w-10 md:h-10 md:p-3 shadow-lg hover:bg-primary-dark";
 
-const Carousel = ({ slides, showArrows }) => {
+const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
+  //Variable para el indice del slide actual
   const [currentPhoto, setCurrentPhoto] = useState(0);
 
+  //Función para cambiar el slide anterior
   const previousPhoto = useCallback(() => {
     setCurrentPhoto(currentPhoto === 0 ? slides.length - 1 : currentPhoto - 1);
   }, [currentPhoto, slides.length]);
 
+  //Función para cambiar el slide siguiente
   const nextPhoto = useCallback(() => {
     setCurrentPhoto(currentPhoto === slides.length - 1 ? 0 : currentPhoto + 1);
   }, [currentPhoto, slides.length]);
+
+  //Efecto para temporizar el cambio de slide
+  useEffect(() => {
+    if (!autoPlay) return;
+    
+    const timer = setInterval(() => { 
+      nextPhoto();
+    },interval)
+
+    //Limpieza del intervalo
+    return () => clearInterval(timer);
+  }, [autoPlay, interval, nextPhoto]);
 
   return (
     <div className="mx-auto rounded-md w-full">
