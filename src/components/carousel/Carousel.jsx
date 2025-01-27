@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState, useCallback, useEffect } from "react";
 
-const ArrowStyle = "bg-primary text-white rounded-full w-5 h-5 p-2 md:w-10 md:h-10 md:p-3 shadow-lg hover:bg-primary-dark";
+const ArrowStyle = "bg-gray-700 bg-opacity-70 text-white rounded-full w-8 h-8 p-2 shadow-lg hover:bg-primary-dark";
 
 const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
   //Variable para el indice del slide actual
@@ -99,9 +99,9 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
         </div>
         {
           showArrows &&
-          <div className="absolute top-0 h-full w-full justify-between items-center flex px-2">
+          <div className="absolute top-0 h-full w-full justify-between items-center hidden md:flex px-2">
             <button onClick={previousPhoto} aria-label="Previous Slide">
-              <Icon icon="tabler:chevron-left" className={ArrowStyle} width="24" height="24" />
+              <Icon icon="tabler:chevron-left" className={ArrowStyle} width="32" height="32" />
             </button>
             <button onClick={nextPhoto} aria-label="Next Slide">
               <Icon icon="tabler:chevron-right" className={ArrowStyle} width="24" height="24" />
