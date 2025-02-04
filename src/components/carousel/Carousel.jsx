@@ -3,21 +3,14 @@ import { useState, useCallback, useEffect } from "react";
 
 const ArrowStyle = "bg-gray-700 bg-opacity-70 text-white rounded-full w-8 h-8 p-2 shadow-lg hover:bg-primary-dark";
 
-const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
+const Carousel = ({ slides, showArrows, autoPlay = true, interval = 5000 }) => {
   //Variable para el indice del slide actual
   const [currentPhoto, setCurrentPhoto] = useState(0);
-  const [dynamicInterval, setDynamicInterval] = useState(interval); // Estado para intervalo dinámico
+  const [isHovered, setIsHovered] = useState(false);
+  const [primeraVez, setPrimeraVez] = useState(true);
 
   const [touchStart, setTouchStart] = useState(null); // Posición inicial del toque
   const [touchEnd, setTouchEnd] = useState(null);  //Posición final del toque
-
-  //Funcion cuando se hace un deslizamiento manual
-  const slowDownInterval  = () => {
-    setDynamicInterval(6000); // Aumenta el intervalo temporalmente
-    setTimeout(() => {
-      setDynamicInterval(interval); // Vuelve al intervalo original después de 6 segundos
-    }, 6000);
-  };
 
   //Función para cambiar el slide anterior
   const previousPhoto = useCallback(() => {
@@ -31,15 +24,26 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
 
   //Efecto para temporizar el cambio de slide
   useEffect(() => {
-    if (!autoPlay) return;
-    
-    const timer = setInterval(() => { 
+    if (!autoPlay || !isHovered) {
+      const timeout = setTimeout(() => {
+        setPrimeraVez(true);
+      }, interval);
+      return () => clearTimeout(timeout);
+    }
+
+    if (primeraVez) {
       nextPhoto();
-    },dynamicInterval)
+      setPrimeraVez(false);
+      return;
+    }
+
+    const timer = setInterval(() => {
+      nextPhoto();
+    },interval)
 
     //Limpieza del intervalo
     return () => clearInterval(timer);
-  }, [autoPlay, interval, nextPhoto]);
+  }, [autoPlay, interval, nextPhoto, isHovered]);
 
   //Se agrega funcion para swipper en dispositivos móviles
    // Manejo del inicio del toque
@@ -69,8 +73,7 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
       // Deslizó hacia la derecha (foto anterior)
       previousPhoto();
     }
-
-    slowDownInterval (); // Llamar a la función de deslizamiento
+    
     // Resetear valores
     setTouchStart(null);
     setTouchEnd(null);
@@ -81,10 +84,12 @@ const Carousel = ({ slides, showArrows, autoPlay = true, interval = 3000 }) => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="overflow-hidden relative rounded-md">
         <div
-          className="flex transition ease-out duration-300"
+          className="flex transition ease-in duration-700"
           style={{
             transform: `translateX(${-currentPhoto * 100}%)`,
           }}
