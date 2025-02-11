@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Alquiler Orca
     images:
-      - url: '~/assets/images/default.png'
+      - url: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_limit,h_350,w_500/v1/landings/alquiler-orca/Plato Circular/ibfkgxyw83iny6nijy4t'
         width: 1200
         height: 628
     type: websites
