@@ -6,14 +6,15 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
 import { whatsappUrl } from '~/utils/utils';
 
 import { YouTube } from 'astro-embed';
+import GeminisStats from '~/components/geminis/GeminisStats.astro';
+import GeminisServices from '~/components/geminis/GeminisServices.astro';
+import GeminisContact from '~/components/geminis/GeminisContact.astro';
 
 const metadata = {
   title: 'Inicio Comedor Industrial',
@@ -69,16 +70,7 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
-    title="Nuestros números hablan por sí solos"
-    subtitle="Más de 30 años brindando un servicio confiable y de calidad."
-    stats={[
-      { title: 'Años de experiencia', amount: '30+' },
-      { title: 'Empresas atendidas', amount: '150+' },
-      { title: 'Platos servidos al día', amount: '10,000+' },
-      { title: 'Satisfacción garantizada', amount: '98%' },
-    ]}
-  />
+  <GeminisStats/>
 
   <!-- Brands Widget ****************** -->
 
@@ -129,36 +121,9 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="¿Cuales son nuesttos servicios?"
-    subtitle="Con 30 años de experiencia, ofrecemos soluciones integrales en alimentación para empresas, garantizando calidad, seguridad e innovación en cada platillo."
-    items={[
-      {
-        title: 'Comedores Industriales',
-        description:
-          'Operamos y gestionamos comedores empresariales con menús balanceados, diseñados por nutriólogos y chefs expertos, asegurando una alimentación saludable y deliciosa para tu equipo.',
-          icon: 'tabler:chef-hat-filled',
-      },
-      {
-        title: 'Servicio de Catering',
-        description:
-          'Brindamos soluciones de catering para eventos corporativos, juntas y capacitaciones, con opciones personalizadas que se adaptan a las necesidades de cada empresa.',
-          icon: 'tabler:tools-kitchen',
-      },
-      {
-        title: 'Alimentos Empacados',
-        description:
-          'Preparamos y distribuimos alimentos listos para consumir, ideales para empresas con turnos rotativos o colaboradores en movilidad, sin comprometer la calidad ni el sabor.',
-          icon: 'tabler:paper-bag',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <GeminisServices/>
 
-  <!-- Features Widget *************** -->
+  <!-- Features Widget   *************** -->
 
   <Features
     id="features"
@@ -251,43 +216,7 @@ const metadata = {
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
-    title="Cuentanos cómo podemos ayudarte"
-    subtitle="Estamos aquí para ayudarte y responder cualquier pregunta que tengas."
-    columns={3}
-    items={[
-      {
-        title: 'Teléfono',
-        icon: 'tabler:phone',
-        callToAction: {
-          target: '_blank',
-          text: 'Llamanos',
-          href: 'tel:+5212761378764',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Email',
-        icon: 'tabler:mail',
-        callToAction: {
-          target: '_blank',
-          text: 'Escríbenos',
-          href: 'mailto:contacto@empresa.com',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Whatsapp',
-        icon: 'tabler:brand-whatsapp',
-        callToAction: {
-          target: '_blank',
-          text: 'Chatéa con nosotros',
-          href: '/',
-          variant: 'link',
-        },
-      },
-    ]}
-  />
+  <GeminisContact/>
 
   <!-- CallToAction Widget *********** -->
 

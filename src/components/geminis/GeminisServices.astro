@@ -1,0 +1,34 @@
+---
+import Features2 from "../widgets/Features2.astro";
+
+
+
+---
+<Features2
+title="¿Cuales son nuestros servicios?"
+subtitle="Con 30 años de experiencia, ofrecemos soluciones integrales en alimentación para empresas, garantizando calidad, seguridad e innovación en cada platillo."
+items={[
+  {
+    title: 'Comedores Industriales',
+    description:
+      'Operamos y gestionamos comedores empresariales con menús balanceados, diseñados por nutriólogos y chefs expertos, asegurando una alimentación saludable y deliciosa para tu equipo.',
+      icon: 'tabler:chef-hat-filled',
+  },
+  {
+    title: 'Servicio de Catering',
+    description:
+      'Brindamos soluciones de catering para eventos corporativos, juntas y capacitaciones, con opciones personalizadas que se adaptan a las necesidades de cada empresa.',
+      icon: 'tabler:tools-kitchen',
+  },
+  {
+    title: 'Alimentos Empacados',
+    description:
+      'Preparamos y distribuimos alimentos listos para consumir, ideales para empresas con turnos rotativos o colaboradores en movilidad, sin comprometer la calidad ni el sabor.',
+      icon: 'tabler:paper-bag',
+  },
+]}
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Features2>
