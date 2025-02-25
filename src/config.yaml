@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Comedor Industrial Geminis
-    template: '%s — Comedor Industrial Geminis'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Comedor Industrial Géminis | Alimentación Empresarial en Puebla y Tlaxcala
+    template: '%s — Comedor Industrial Géminis | Alimentación Empresarial en Puebla y Tlaxcala'
+  description: "✅ Comedor Industrial Géminis: Más de 30 años ofreciendo alimentación segura, nutritiva y deliciosa en Puebla y Tlaxcala. Banquetes, catering empresarial y comedores industriales para empresas y fábricas."
   robots:
     index: true
     follow: true
