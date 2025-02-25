@@ -11,10 +11,12 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
+import { whatsappUrl } from '~/utils/utils';
+
 import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Inicio Comedor Industrial',
 };
 ---
 
@@ -22,28 +24,25 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    tagline="Gastronomía de Calidad"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        text: 'Whatsapp',
+        href: 'whatsappUrl',
+        icon: 'tabler:brand-whatsapp',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Nuestros Servicios', href: '/servicios' },
     ]}
   >
-    <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
-    </Fragment>
+  <Fragment slot="title">
+    Descubre el mejor <span class="text-accent dark:text-white highlight">servicio de comedor industrial</span> para tu empresa
+  </Fragment>
 
-    <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
-    </Fragment>
+  <Fragment slot="subtitle">
+    En <span class="font-semibold">Géminis S.A de C.V</span>, nos especializamos en ofrecer alimentación de calidad, garantizando higiene, sabor y nutrición para tus colaboradores.
+  </Fragment>
 
     <Fragment slot="image">
       <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
@@ -59,8 +58,9 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    title="¿Quiénes somos?"
+    subtitle=`Géminis S.A de C.V cuenta con más de 30 años de experiencia en el servicio de alimentación industrial. 
+    Nos especializamos en la preparación de alimentos seguros, garantizando la salud nutricional de todos nuestros comensales.`
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -70,59 +70,59 @@ const metadata = {
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    title="Nuestros números hablan por sí solos"
+    subtitle="Más de 30 años brindando un servicio confiable y de calidad."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
+      { title: 'Años de experiencia', amount: '30+' },
+      { title: 'Empresas atendidas', amount: '150+' },
+      { title: 'Platos servidos al día', amount: '10,000+' },
+      { title: 'Satisfacción garantizada', amount: '98%' },
     ]}
   />
 
   <!-- Brands Widget ****************** -->
 
   <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    title="Algunos de nuestros clientes"
+    subtitle="en Géminis creemos en el trabajo en equipo y comunicación con nuestros clientes para lograr les mejores experiencias culinarias."
     icons={[]}
     images={[
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Paypal',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/x9bljcfvi63srvcsoxwm',
+        alt: 'General Cable',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
-        alt: 'Visa',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale/f_auto,q_auto/v1/landings/geminis/clients/quhgxzwk7eoqmjqwqtgh',
+        alt: 'LA MORENA',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
-        alt: 'Ebay',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/biqtcd7d1silhuj6jzdr',
+        alt: 'PRYSMIAN GROUP',
       },
 
       {
-        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
-        alt: 'Youtube',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_fill,h_48/f_auto,q_auto/v1/landings/geminis/clients/mdosb4lktw66lxmikeer',
+        alt: 'DOW-QUÍMICA',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/hn3q32fqunikoltsaluv',
+        alt: 'TEISA',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/xor8ztw025v3fi9r3sgc',
+        alt: 'CA-LE'
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/ybmfochox9x0accxwonf',
+        alt: 'GONAC',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/w_120,h_48,c_scale,h_48/f_auto,q_auto/v1/landings/geminis/clients/x9bljcfvi63srvcsoxwm',
+        alt: 'PASTEURIZADORA MAULEC S.A.P.I DE C.V',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
-        alt: 'Yahoo',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/h_48,c_limit/f_auto,q_auto/v1/landings/geminis/clients/ertofhi18r5hzcdfsvzt',
+        alt: 'DNX',
       },
     ]}
   />
@@ -130,26 +130,26 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="¿Cuales son nuesttos servicios?"
+    subtitle="Con 30 años de experiencia, ofrecemos soluciones integrales en alimentación para empresas, garantizando calidad, seguridad e innovación en cada platillo."
     items={[
       {
-        title: 'Installation Instructions',
+        title: 'Comedores Industriales',
         description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
-        icon: 'flat-color-icons:document',
+          'Operamos y gestionamos comedores empresariales con menús balanceados, diseñados por nutriólogos y chefs expertos, asegurando una alimentación saludable y deliciosa para tu equipo.',
+          icon: 'tabler:chef-hat-filled',
       },
       {
-        title: 'Demo and Previews',
+        title: 'Servicio de Catering',
         description:
-          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
-        icon: 'flat-color-icons:template',
+          'Brindamos soluciones de catering para eventos corporativos, juntas y capacitaciones, con opciones personalizadas que se adaptan a las necesidades de cada empresa.',
+          icon: 'tabler:tools-kitchen',
       },
       {
-        title: 'Technical Support',
+        title: 'Alimentos Empacados',
         description:
-          'Providing customer support for any technical issues related to the templates or their implementation.',
-        icon: 'flat-color-icons:voice-presentation',
+          'Preparamos y distribuimos alimentos listos para consumir, ideales para empresas con turnos rotativos o colaboradores en movilidad, sin comprometer la calidad ni el sabor.',
+          icon: 'tabler:paper-bag',
       },
     ]}
   >
@@ -162,102 +162,107 @@ const metadata = {
 
   <Features
     id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
+    title="Lo que nos hace diferentes"
+    subtitle="Más de 30 años ofreciendo soluciones de alimentación empresarial con los más altos estándares de calidad y servicio."
     columns={3}
     items={[
       {
-        title: 'Modern and Professional Design',
+        title: 'Nutrición y Calidad Garantizada',
         description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
-        icon: 'tabler:artboard',
+          'Menús diseñados por nutriólogos y chefs expertos, garantizando una alimentación equilibrada, deliciosa y saludable.',
+        icon: 'tabler:chef-hat',
       },
       {
-        title: 'Responsive and Mobile-Friendly',
-        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
-        icon: 'tabler:picture-in-picture',
-      },
-      {
-        title: 'Customizability',
+        title: 'Cobertura Global',
         description:
-          'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
-        icon: 'tabler:adjustments-horizontal',
+          'Operamos en múltiples países con infraestructura de primer nivel, asegurando eficiencia y cumplimiento normativo en cada región.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Fast Loading Times',
-        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Flexibilidad y Personalización',
         description:
-          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
-        icon: 'tabler:arrows-right-left',
+          'Nos adaptamos a las necesidades específicas de cada empresa, ofreciendo menús personalizados y soluciones logísticas eficientes.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
-        icon: 'tabler:plug-connected',
+        title: 'Sostenibilidad y Responsabilidad',
+        description:
+          'Implementamos prácticas sostenibles en la selección de ingredientes, reducción de desperdicios y procesos operativos.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Tecnología e Innovación',
+        description:
+          'Utilizamos tecnología avanzada para optimizar la gestión de comedores, agilizar pedidos y mejorar la experiencia de los usuarios.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Seguridad Alimentaria de Nivel Mundial',
+        description:
+          'Cumplimos con estrictas normativas internacionales de higiene y seguridad para garantizar alimentos frescos y seguros.',
+        icon: 'tabler:shield-check',
       },
     ]}
   />
 
+
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'What are landing page templates?',
-        description:
-          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
-      },
-      {
-        title: 'Why should I use a template?',
-        description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
-      },
-      {
-        title: 'Can I preview templates before buying?',
-        description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
-      },
-      {
-        title: 'Do I need technical skills to use a template?',
-        description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
-      },
-      {
-        title: 'Can I use the template on multiple websites?',
-        description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
-      },
-      {
-        title: 'What if I need help with customization?',
-        description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
+  title="Preguntas Frecuentes"
+  items={[
+    {
+      title: '¿Cómo garantizan la calidad y seguridad de los alimentos?',
+      description:
+        'Cumplimos con los más altos estándares internacionales en seguridad alimentaria, implementando rigurosos controles de calidad en cada etapa del proceso, desde la selección de ingredientes hasta la entrega final.',
+    },
+    {
+      title: '¿Pueden adaptarse a necesidades dietéticas específicas?',
+      description:
+        'Sí, ofrecemos menús personalizados para distintas necesidades nutricionales, incluyendo dietas vegetarianas, sin gluten, bajas en sodio y más. Nuestro equipo de nutriólogos y chefs trabaja para garantizar opciones saludables y equilibradas para todos.',
+    },
+    {
+      title: '¿En qué Estados ofrecen sus servicios?',
+      description:
+        'Operamos a nivel global, brindando soluciones en alimentación a empresas de diversas industrias en Tlaxcala y Puebla. Contamos con infraestructura y logística avanzada para garantizar un servicio eficiente sin importar la ubicación.',
+    },
+    {
+      title: '¿Qué diferencia a su comedor industrial de otros proveedores?',
+      description:
+        'Nuestra experiencia de más de 30 años, la innovación en nuestros procesos y el compromiso con la calidad nos posicionan como un referente en la industria. Ofrecemos soluciones flexibles, nutrición especializada y un servicio eficiente adaptado a cada cliente.',
+    },
+    {
+      title: '¿Cómo se manejan los residuos y la sostenibilidad?',
+      description:
+        'Nos comprometemos con la sostenibilidad mediante prácticas responsables, como la reducción de desperdicios, el uso de ingredientes locales y la implementación de programas de reciclaje. Creemos en un modelo de alimentación que respete el medio ambiente.',
+    },
+    {
+      title: '¿Cómo puedo solicitar una propuesta o cotización?',
+      description:
+        'Puedes contactarnos a través de nuestro sitio web, correo electrónico o teléfono. Nuestro equipo estará encantado de analizar tus necesidades y ofrecerte una solución personalizada para tu empresa.',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+  </Fragment>
+</FAQs>
+
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
-    columns={4}
+    title="Cuentanos cómo podemos ayudarte"
+    subtitle="Estamos aquí para ayudarte y responder cualquier pregunta que tengas."
+    columns={3}
     items={[
       {
-        title: 'Phone',
+        title: 'Teléfono',
         icon: 'tabler:phone',
         callToAction: {
           target: '_blank',
-          text: 'Call us',
-          href: '/',
+          text: 'Llamanos',
+          href: 'tel:+5212761378764',
           variant: 'link',
         },
       },
@@ -266,27 +271,17 @@ const metadata = {
         icon: 'tabler:mail',
         callToAction: {
           target: '_blank',
-          text: 'Write to us',
-          href: '/',
+          text: 'Escríbenos',
+          href: 'mailto:contacto@empresa.com',
           variant: 'link',
         },
       },
       {
-        title: 'Chat with sales',
-        icon: 'tabler:message-circle',
+        title: 'Whatsapp',
+        icon: 'tabler:brand-whatsapp',
         callToAction: {
           target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with support',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
+          text: 'Chatéa con nosotros',
           href: '/',
           variant: 'link',
         },
@@ -297,21 +292,22 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+  actions={[
+    {
+      variant: 'primary',
+      target: '_blank',
+      text: 'Contáctanos',
+      href: whatsappUrl, // O también podría ser 'mailto:contacto@empresa.com'
+      icon: 'tabler:brand-whatsapp',
+    },
+  ]}
+>
+  <Fragment slot="title">Sé parte de nuestra familia</Fragment>
 
-    <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
-    </Fragment>
-  </CallToAction>
+  <Fragment slot="subtitle">
+    Únete a un entorno de trabajo dinámico y de crecimiento continuo, donde cada día se construye la excelencia
+    en alimentación empresarial.
+  </Fragment>
+</CallToAction>
+
 </Layout>

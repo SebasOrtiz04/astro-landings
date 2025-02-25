@@ -1,4 +1,5 @@
 import { getPermalink } from './utils/permalinks';
+import { whatsappUrl } from './utils/utils';
 
 export const headerData = {
   links: [
@@ -20,32 +21,25 @@ export const headerData = {
     }
   ],
   actions: [
-    { href: 'https://github.com/onwidget/astrowind', target: '_blank', icon: 'tabler:brand-whatsapp', variant: 'icon'},
+    { href: whatsappUrl, target: '_blank', icon: 'tabler:brand-whatsapp', variant: 'icon'},
   ],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Inicio',
-      href: getPermalink('/'),
+      title: 'Menú',
+      links:[
+        { text: 'Inicio', href: getPermalink('/') },
+        { text: 'Nosotros', href: getPermalink('/nosotros') },
+        { text: 'Servicios', href: getPermalink('/servicios') },
+        { text: 'Contacto', href: getPermalink('/contacto') },
+      ]
     },
-    {
-      title: 'Nosotros',
-      href: getPermalink('/nosotros'),
-    },
-    {
-      title: 'Servicios',
-      href: getPermalink('/servicios'),
-    },
-    {
-      title: 'Contacto',
-      href: getPermalink('/contacto'),
-    }
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Términos', href: getPermalink('/terms') },
+    { text: 'Política de Privacidad', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
