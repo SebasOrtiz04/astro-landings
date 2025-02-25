@@ -1,10 +1,12 @@
 ---
+import GeminisServices from '~/components/geminis/GeminisServices.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { whatsappUrl } from '~/utils/utils';
 
 const metadata = {
   title: 'Services',
@@ -15,162 +17,154 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
-  />
+  tagline="30 años de excelencia en alimentación"
+  title="Calidad, higiene y sabor en cada platillo"
+  subtitle="Con tres décadas de experiencia, garantizamos un servicio confiable y alimentos preparados con los más altos estándares de higiene y calidad. Nuestro compromiso es brindar comidas saludables y deliciosas para tu equipo, optimizando su bienestar y rendimiento."
+  actions={[{ variant: 'primary', target: '_blank', text: 'Contrata ahora', href: whatsappUrl }]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/geminis/cj7p4mdsgxcobwg8bwkv',
+    alt: 'Servicio de Comedor Industrial Géminis',
+  }}
+/>
+
+<GeminisServices/>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  />
+  title="Variedad y calidad en cada platillo"
+  subtitle="Ofrecemos opciones equilibradas, nutritivas y adaptadas a las necesidades de tu empresa."
+  columns={3}
+  items={[
+    {
+      title: 'Nutrición balanceada',
+      description:
+        'Nuestros menús están diseñados por expertos en nutrición para garantizar una alimentación saludable y completa para tu equipo.',
+      icon: 'tabler:heart',
+    },
+    {
+      title: 'Ingredientes frescos',
+      description:
+        'Utilizamos ingredientes de alta calidad y frescura para asegurar el mejor sabor y valor nutricional en cada comida.',
+      icon: 'tabler:leaf',
+    },
+    {
+      title: 'Variedad de opciones',
+      description:
+        'Ofrecemos menús personalizados con diversas opciones para adaptarnos a diferentes gustos y requerimientos alimenticios.',
+      icon: 'tabler:menu',
+    },
+    {
+      title: 'Eficiencia y puntualidad',
+      description:
+        'Garantizamos un servicio puntual y eficiente para que tu equipo disfrute de sus comidas sin interrupciones en su jornada laboral.',
+      icon: 'tabler:clock',
+    },
+    {
+      title: 'Seguridad alimentaria',
+      description:
+        'Cumplimos con estrictos estándares de higiene y seguridad alimentaria para ofrecer platillos de la más alta calidad.',
+      icon: 'tabler:shield-check',
+    },
+    {
+      title: 'Atención personalizada',
+      description:
+        'Brindamos un servicio adaptado a las necesidades de cada empresa, con atención cercana y profesional.',
+      icon: 'tabler:clock',
+    }
+  ]}
+/>
+
+
+<!-- Content Widget **************** -->
+
+<Content
+  isReversed
+  items={[
+    {
+      title: 'Menús equilibrados',
+      description:
+        'Ofrecemos opciones nutritivas y balanceadas para asegurar el bienestar y rendimiento de tu equipo.',
+      icon: 'tabler:heart',
+    },
+    {
+      title: 'Personalización de menús',
+      description:
+        'Adaptamos nuestros platillos a las necesidades de tu empresa, considerando preferencias y restricciones alimentarias.',
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Ingredientes de calidad',
+      description:
+        'Utilizamos productos frescos y de alta calidad para garantizar el mejor sabor y valor nutricional en cada comida.',
+      icon: 'tabler:leaf',
+    },
+    {
+      title: 'Estrictos estándares de higiene',
+      description:
+        'Cumplimos con rigurosos protocolos de seguridad alimentaria para brindar un servicio confiable y saludable.',
+      icon: 'tabler:shield-check',
+    },
+  ]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_crop,g_auto,h_800,w_800/landings/geminis/zdzvqfzpsryi5hpkacu5',
+    alt: 'Imagen de platillos saludables',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Compromiso con la calidad y el bienestar
+    </h3>
+  </Fragment>
+</Content>
+
 
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content>
+  isAfterContent
+  items={[
+    {
+      title: 'Equipo capacitado',
+      description:
+        'Contamos con chefs y personal altamente capacitado para ofrecer un servicio eficiente y de calidad.',
+      icon: 'tabler:users',
+    },
+    {
+      title: 'Atención personalizada',
+      description:
+        'Nos adaptamos a las necesidades de cada cliente, ofreciendo soluciones flexibles para garantizar la mejor experiencia.',
+      icon: 'tabler:user-star',
+    },
+    {
+      title: 'Eficiencia operativa',
+      description:
+        'Optimizamos nuestros procesos para brindar un servicio ágil y confiable, minimizando tiempos de espera.',
+      icon: 'tabler:clock',
+    },
+    {
+      title: 'Disponibilidad garantizada',
+      description:
+        'Nuestro equipo está siempre listo para atenderte, asegurando una operación continua sin interrupciones.',
+      icon: 'tabler:contract',
+    },
+  ]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/geminis/r1fo7elpzj2mwek4ugen',
+    alt: 'Imagen del equipo en acción',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Un equipo dedicado a tu servicio
+    </h3>
+  </Fragment>
+</Content>
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="Comentarios de clientes"
     testimonials={[
       {
         testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
@@ -200,25 +194,23 @@ const metadata = {
         },
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
-      },
-    ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+  actions={[
+    {
+      text: 'Descargar menú',
+      target: '_blank',
+      href: '/public/geminis_menu_a_quien_corresponda.pdf',
+    },
+  ]}
+>
+  <Fragment slot="title">Descubre nuestro menú</Fragment>
+
+  <Fragment slot="subtitle">
+    Consulta un ejemplo de nuestro menú y conoce la variedad de platillos que ofrecemos.
+  </Fragment>
+</CallToAction>
 </Layout>

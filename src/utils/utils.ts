@@ -50,3 +50,5 @@ export const toUiAmount = (amount: number) => {
 
   return value;
 };
+
+export const whatsappUrl = 'https://wa.link/pm24u4'

@@ -1,0 +1,53 @@
+---
+import { whatsappUrl } from "~/utils/utils";
+import Features3 from "../widgets/Features3.astro";
+
+---
+
+<Features3
+title="Cuentanos cómo podemos ayudarte"
+subtitle="Estamos aquí para ayudarte y responder cualquier pregunta que tengas."
+columns={4}
+items={[
+  {
+    title: 'Teléfono',
+    icon: 'tabler:phone',
+    callToAction: {
+      target: '_blank',
+      text: 'Llamanos',
+      href: 'tel:+5212761378764',
+      variant: 'link',
+    },
+  },
+  {
+    title: 'Email',
+    icon: 'tabler:mail',
+    callToAction: {
+      target: '_blank',
+      text: 'Escríbenos',
+      href: 'mailto:contacto@empresa.com',
+      variant: 'link',
+    },
+  },
+  {
+    title: 'Whatsapp',
+    icon: 'tabler:brand-whatsapp',
+    callToAction: {
+      target: '_blank',
+      text: 'Chatéa con nosotros',
+      href: whatsappUrl,
+      variant: 'link',
+    },
+  },
+  {
+    title: 'Encuentranos',
+    icon: 'tabler:map-pin-2',
+    callToAction: {
+      target: '_blank',
+      text: 'Ven a nuestras oficinas',
+      href: '/',
+      variant: 'link',
+    },
+  },
+]}
+/>

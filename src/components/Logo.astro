@@ -1,9 +1,10 @@
 ---
+import Image from 'astro/components/Image.astro';
 import { SITE } from 'astrowind:config';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-4xl  text-gray-900 font-logo whitespace-nowrap dark:text-white flex items-center "
 >
-   {SITE?.name}
+<Image src="https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/geminis/logos/ahbk4dbnngrmck800dsm" alt={SITE.name} width={70} height={70} format="webp" /> {SITE?.name.split(' ')[2]}
 </span>
