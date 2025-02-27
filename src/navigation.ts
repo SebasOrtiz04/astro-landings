@@ -42,8 +42,7 @@ export const footerData = {
     { text: 'Política de Privacidad', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@danielaltamirano-l1e' },
   ],
   footNote: `
   <div class="flex flex-col md:flex-row gap-2 items-baseline text-sm mr-4 dark:text-muted">

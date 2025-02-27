@@ -1,0 +1,13 @@
+---
+// TikTokEmbed.astro
+const { videoUrl } = Astro.props;
+---
+
+<blockquote class="tiktok-embed" cite={videoUrl} data-video-id={videoUrl.split('/').pop()} 
+    style="max-width: 605px; min-width: 325px;">
+    <section> 
+        <a target="_blank" href={videoUrl}>Ver en TikTok</a> 
+    </section>
+</blockquote>
+
+<script src="https://www.tiktok.com/embed.js" async></script>
