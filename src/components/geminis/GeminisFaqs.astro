@@ -1,0 +1,43 @@
+---
+import FAQs from "../widgets/FAQs.astro";
+
+---
+<FAQs
+title="Preguntas Frecuentes"
+items={[
+  {
+    title: '¿Cómo garantizan la calidad y seguridad de los alimentos?',
+    description:
+      'Cumplimos con los más altos estándares internacionales en seguridad alimentaria, implementando rigurosos controles de calidad en cada etapa del proceso, desde la selección de ingredientes hasta la entrega final.',
+  },
+  {
+    title: '¿Pueden adaptarse a necesidades dietéticas específicas?',
+    description:
+      'Sí, ofrecemos menús personalizados para distintas necesidades nutricionales, incluyendo dietas vegetarianas, sin gluten, bajas en sodio y más. Nuestro equipo de nutriólogos y chefs trabaja para garantizar opciones saludables y equilibradas para todos.',
+  },
+  {
+    title: '¿En qué Estados ofrecen sus servicios?',
+    description:
+      'Operamos a nivel global, brindando soluciones en alimentación a empresas de diversas industrias en Tlaxcala y Puebla. Contamos con infraestructura y logística avanzada para garantizar un servicio eficiente sin importar la ubicación.',
+  },
+  {
+    title: '¿Qué diferencia a su comedor industrial de otros proveedores?',
+    description:
+      'Nuestra experiencia de más de 30 años, la innovación en nuestros procesos y el compromiso con la calidad nos posicionan como un referente en la industria. Ofrecemos soluciones flexibles, nutrición especializada y un servicio eficiente adaptado a cada cliente.',
+  },
+  {
+    title: '¿Cómo se manejan los residuos y la sostenibilidad?',
+    description:
+      'Nos comprometemos con la sostenibilidad mediante prácticas responsables, como la reducción de desperdicios, el uso de ingredientes locales y la implementación de programas de reciclaje. Creemos en un modelo de alimentación que respete el medio ambiente.',
+  },
+  {
+    title: '¿Cómo puedo solicitar una propuesta o cotización?',
+    description:
+      'Puedes contactarnos a través de nuestro sitio web, correo electrónico o teléfono. Nuestro equipo estará encantado de analizar tus necesidades y ofrecerte una solución personalizada para tu empresa.',
+  },
+]}
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+</Fragment>
+</FAQs>

@@ -1,9 +1,10 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import GeminisContact from '~/components/geminis/GeminisContact.astro';
+import GeminisDistH from '~/components/geminis/GeminisDistH.astro';
+import GeminisFaqs from '~/components/geminis/GeminisFaqs.astro';
 
 const metadata = {
   title: 'Contact',
@@ -17,32 +18,11 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-
+  
   <GeminisContact />
 
-    <!-- Features2 Widget ************** -->
+  <GeminisDistH/>
 
-    <Features2
-    title="Nuestras Ubicaciones"
-    tagline="encuentranos"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
+  <GeminisFaqs/>
+
 </Layout>
