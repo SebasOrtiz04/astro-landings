@@ -8,6 +8,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import TikTokEmbed from '~/components/widgets/TikTokEmbed.astro';
 
 const metadata = {
   title: 'Sobre Nosotros',
@@ -92,9 +93,16 @@ const metadata = {
       },
     ]}
   />
-
+  
   <!-- Steps2 Widget ****************** -->
+  
+<section class="mt-10 flex flex-col justify-start min-h-screen">
+  <h2 class="text-center text-4xl font-bold mb-10">Descubré nuestro TikTok</h3>
+  <TikTokEmbed videoUrl="https://www.tiktok.com/@danielaltamiran183/video/7471311802526125317" />
+</section>
 
+  
+  
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
