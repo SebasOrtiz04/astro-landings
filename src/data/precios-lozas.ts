@@ -2,7 +2,7 @@ import type { Item } from "~/types";
 
 //Definicion lista de precios
 export const priceTableWare: Array<Item> = [
-  { title: 'Plato tinche', description: '12.00 MXN' },
+  { title: 'Plato trinche', description: '12.00 MXN' },
   { title: 'Plato hondo', description: '12.00 MXN' },
   { title: 'Plato entremes', description: '12.00 MXN' },
   { title: 'Platillo', description: '12.00 MXN' },
