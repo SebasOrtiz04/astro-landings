@@ -46,11 +46,12 @@ export const footerData = {
   ],
   footNote: `
   <div class="flex flex-col md:flex-row gap-2 items-baseline text-sm mr-4 dark:text-muted">
-    Hecho con ❤️ por 
-    <a class="text-blue-secondary underline dark:text-muted" target='_blanck' href="https://sebas.mistli.com.mx/"> Sebas Ortiz</a> 
-    basado en la plantilla astrowind MIT de 
-    <a class="text-blue-secondary flex items-baseline gap-2 underline dark:text-muted" target='_blanck' href="https://onwidget.com/"> 
-    onWidget</a> .
-  </div>
+    <div class="flex items-center justify-center gap-2 max-w-[1024px] mx-auto " >
+    Hecho con ❤️ por <a class="text-blue-secondary underline dark:text-muted" target='_blanck' href="https://sebas.mistli.com.mx/"> Sebas Ortiz</a> 
+    </div>
+    <div class="flex items-center justify-center gap-2 max-w-[1024px] mx-auto " >
+    basado en la plantilla astrowind MIT de <a class="text-blue-secondary flex items-baseline gap-2 underline dark:text-muted" target='_blanck' href="https://onwidget.com/"> onWidget</a>
+    </div>
+    </div>
   `,
 };
