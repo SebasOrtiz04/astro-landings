@@ -11,6 +11,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import TikTokEmbed from '~/components/widgets/TikTokEmbed.astro';
 import { Image } from 'astro:assets';
 import GeminisDistH from '~/components/geminis/GeminisDistH.astro';
+import GeminisMenu from '~/components/geminis/GeminisMenu.astro';
 
 const metadata = {
   title: 'Sobre Nosotros',
@@ -107,21 +108,8 @@ const metadata = {
   
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-  actions={[
-    {
-      text: 'Descargar menú',
-      target: '_blank',
-      href: '/public/geminis_menu_a_quien_corresponda.pdf',
-    },
-  ]}
->
-  <Fragment slot="title">Descubre nuestro menú</Fragment>
 
-  <Fragment slot="subtitle">
-    Consulta un ejemplo de nuestro menú y conoce la variedad de platillos que ofrecemos.
-  </Fragment>
-</CallToAction>
+  <GeminisMenu/>
 
   <!-- Features2 Widget ************** -->
 
