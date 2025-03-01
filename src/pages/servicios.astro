@@ -1,4 +1,5 @@
 ---
+import GeminisMenu from '~/components/geminis/GeminisMenu.astro';
 import GeminisServices from '~/components/geminis/GeminisServices.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -198,19 +199,5 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-  actions={[
-    {
-      text: 'Descargar menú',
-      target: '_blank',
-      href: '/geminis_menu_a_quien_corresponda.pdf',
-    },
-  ]}
->
-  <Fragment slot="title">Descubre nuestro menú</Fragment>
-
-  <Fragment slot="subtitle">
-    Consulta un ejemplo de nuestro menú y conoce la variedad de platillos que ofrecemos.
-  </Fragment>
-</CallToAction>
+    <GeminisMenu/>
 </Layout>
