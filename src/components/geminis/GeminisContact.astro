@@ -7,7 +7,7 @@ import Features3 from "../widgets/Features3.astro";
 <Features3
 title="Cuentanos cómo podemos ayudarte"
 subtitle="Estamos aquí para ayudarte y responder cualquier pregunta que tengas."
-columns={3}
+columns={4}
 items={[
   {
     title: 'Teléfono',
@@ -36,6 +36,16 @@ items={[
       target: '_blank',
       text: 'Chatéa con nosotros',
       href: whatsappUrl,
+      variant: 'link',
+    },
+  },
+  {
+    title: 'Youtube',
+    icon: 'tabler:brand-youtube-filled',
+    callToAction: {
+      target: '_blank',
+      text: 'Conócenos',
+      href: 'https://www.youtube.com/@danielaltamirano-l1e',
       variant: 'link',
     },
   }
