@@ -18,8 +18,9 @@ const { metadata } = Astro.props;
   </Fragment>
   <Fragment slot="header">
     <slot name="header">
+      <!-- {headerData?.links[2] ? [headerData.links[2]] : undefined} -->
       <Header
-        links={headerData?.links[2] ? [headerData.links[2]] : undefined}
+        links={undefined}
         actions={[
           {
             text: 'Download',

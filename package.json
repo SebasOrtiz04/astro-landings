@@ -27,6 +27,8 @@
     "@astrolib/analytics": "^0.6.1",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@fontsource-variable/inter": "^5.1.0",
+    "@iconify-json/line-md": "^1.2.5",
+    "@iconify-json/tdesign": "^1.2.7",
     "astro": "^5.5.3",
     "astro-embed": "^0.7.4",
     "astro-icon": "^1.1.1",

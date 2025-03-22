@@ -1,13 +1,13 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
-  links: [
-    {text: 'Inicio', href: '/',},
-    {text: 'Nosotros', href: '/about',},
-    {text: 'Servicios', href: '/pricing',},
-    {text: 'Contácto', href: 'contact',},
-  ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  // links: [
+  //   {text: 'Inicio', href: '/',},
+  //   {text: 'Nosotros', href: '/#',},
+  //   {text: 'Servicios', href: '/#',},
+  //   {text: 'Contácto', href: '/#',},
+  // ],
+  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
