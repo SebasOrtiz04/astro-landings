@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -21,11 +22,11 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <!-- <Hero2
-    tagline="SaaS Web Demo"
+  <Hero2
+    tagline="Flownet"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', target: '_blank', text: 'Whats app', href: "https://wa.me/15551234567?text=I'm%20interested%20in%20your%20car%20for%20sale'" },
+      { text: 'facebook', href: 'https://www.facebook.com' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
@@ -33,77 +34,111 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white highlight"
-        >SaaS</span
-      > companion<br />
+      Videovigilancia para<br />Pymes, Comercios <span class="text-accent dark:text-white highlight"
+        >y</span
+      > Hogares<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Elevate your website creation process with <span class="font-semibold">AstroWind</span>'s SaaS solutions.</span
+        <span class="font-semibold">Flownet</span> es una empresa argentina especializada en sistemas de videovigilancia para pymes, comercios y hogares.</span
       >
-      Seamlessly blend the power of Astro 4.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
+      Brindamos soluciones de seguridad confiables y personalizadas, utilizando tecnología de vanguardia para proteger lo que más importa
     </Fragment>
-  </Hero2> -->
+  </Hero2>
+
+    <!-- Brands Widget ****************** -->
+
+    <Brands
+    title="Marcas"
+    subtitle="Manejamos diferentes marcas el cual su nombre significa calidad."
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Dahua',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Hikvision',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Ezviz',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Kalop',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Kingston',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'cisco',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'seagate',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'tp-link',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'furukawa',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'commscope',
+      },
+    ]}
+  />
 
   <!-- Features Widget *************** -->
-
-  <!-- <Features
+  <Features
     id="features"
-    title="Why choose AstroWind?"
-    subtitle="Each of the following features enhances AstroWind's value proposition."
+    title="Nuestros productos"
+    subtitle=""
     columns={2}
     items={[
       {
-        title: 'Integration of Astro 4.0 and Tailwind CSS',
+        title: 'Videovigilancia',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
-        icon: 'tabler:layers-union',
+          'Videovigilancia para Pymes, Comercios y Hogares.',
+        icon: 'line-md:watch',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
-        icon: 'tabler:artboard',
+        title: 'Instalación y configuración',
+        description: `Asesoramiento e instalación profesional.`,
+        icon: 'line-md:cog-loop',
       },
       {
-        title: 'Effortless customization for portfolios and marketing sites',
+        title: 'Mantenimiento y Soporte Técnico',
         description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
-        icon: 'tabler:writing',
-      },
-      {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
-        icon: 'tabler:podium',
-      },
-      {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 4.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
-        icon: 'tabler:eyeglass',
-      },
+          'Servicio postventa y asistencia permanente.',
+        icon: 'line-md:construction',
+      }
     ]}
-  /> -->
+  />
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
-    title="Use cases"
-    subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
+  <Content
+    title="¿Quienes somos?"
+    subtitle="Somos una empresa en crecimiento con el conocimiento y la experiencia para ofrecer soluciones de seguridad modernas y accesibles. Nuestro compromiso es brindar tranquilidad a través de tecnología de vanguardia y un servicio profesional de confianza."
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: '¿Por que elegirnos?',
         description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 4.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+          'Brindamos soluciones a medida con equipos de última tecnología, instalación profesional y soporte postventa. Nos enfocamos en ofrecer un servicio eficiente, accesible y confiable, con atención personalizada y compromiso en cada proyecto.',
       },
       {
-        title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+        title: 'Calidad',
+        description: `Nuestro estandar es la calidad.`,
       },
     ]}
     image={{
@@ -113,14 +148,14 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
+        CABA y GBA <br /><span class="text-2xl">Cerca de tu localidad</span>
       </h3>
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -185,15 +220,15 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     items={[
       {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
+        title: '¿Cúal es el ideal para mi?',
+        description: `¿Tienes dudas o necesitas una cotización? 📩 Escríbenos a nuestro correo y te ayudaremos a encontrar la mejor solución en seguridad. ¡Estamos listos para atenderte!`,
       },
       {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
+        title: 'Contactanos',
+        description: `Protege lo que más importa con la mejor tecnología en seguridad.`,
       },
     ]}
     image={{
@@ -203,14 +238,14 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
+        Contáctanos hoy <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
       </h3>
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Pricing Widget ******************* -->
 
@@ -257,65 +292,75 @@ const metadata = {
 
   <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
-    title="Frequently Asked Questions"
+  <FAQs
+    title="¿Como contratar nuestros sevicios?"
     items={[
       {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        title: 'Consulta y Asesoramiento – Analizamos tu necesidad.',
         description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
-        icon: 'tabler:chevrons-right',
+          'Contactanos mediante cualquier medio y nosotros te asesoraremos para llevar tu idea a cabo.',
+        icon: 'tdesign:numbers-1',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
-        icon: 'tabler:chevrons-right',
+        title: 'Propuesta Personalizada – Te presentamos la mejor solución.',
+        description: `Platicando con nuestros expertos te haremos saber cual es la mejor solución que se ajuste a tus necesidades.`,
+        icon: 'tdesign:numbers-2',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
+        title: 'Instalación Profesional – Dejamos el sistema funcionando.',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
-        icon: 'tabler:chevrons-right',
+          'Nuestra correcta intalación permite un correcto funcionamiento a largo plazo.',
+        icon: 'tdesign:numbers-3',
       },
       {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
-        icon: 'tabler:chevrons-right',
+        title: 'Capacitación y Puesta en Marcha – Te enseñamos a utilizarlo.',
+        description: `Te capacitamos para que tu sistema este siempre funcional.`,
+        icon: 'tdesign:numbers-4',
+      },
+      {
+        title: 'Mantenimiento y Soporte – Seguimiento y asistencia técnica.',
+        description: `Damos mantenimiento a todos nuestros productos.`,
+        icon: 'tdesign:numbers-5',
       },
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </FAQs> -->
+  </FAQs>
 
   <!-- Steps2 Widget ****************** -->
 
-  <!-- <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+  <Steps2
+    title="Contactanos"
+    subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
-      text: 'Contact us',
-      href: '/',
+      text: 'Whats app',
+      href: "https://wa.me/15551234567?text=I'm%20interested%20in%20your%20car%20for%20sale'",
     }}
     items={[
       {
         title: 'Email us',
         description: 'contact@support.com',
-        icon: 'tabler:mail',
+        icon: 'line-md:email',
       },
       {
-        title: 'Call us',
+        title: 'Llamanos',
         description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        icon: 'line-md:phone-call-loop',
       },
       {
-        title: 'Follow us',
+        title: 'Ubicación',
+        description: 'CABA y GBA',
+        icon: 'line-md:map-marker-alt-loop',
+      },
+      {
+        title: 'Siguenos',
         description: '@example',
-        icon: 'tabler:brand-twitter',
+        icon: 'line-md:facebook',
       },
     ]}
-  /> -->
+  />
 
   <!-- BlogLatestPost Widget **************** -->
 
