@@ -6,7 +6,6 @@ import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
-import Brands from '~/components/widgets/Brands.astro';
 
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -45,87 +44,11 @@ const metadata = {
     </Fragment>
   </Hero2>
 
-    <!-- Brands Widget ****************** -->
-
-    <Brands
-    title="Marcas"
-    subtitle="Manejamos diferentes marcas el cual su nombre significa calidad."
-    icons={[]}
-    images={[
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Dahua',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Hikvision',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Ezviz',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Kalop',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Kingston',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'cisco',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'seagate',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'tp-link',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'furukawa',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'commscope',
-      },
-    ]}
-  />
-
-  <!-- Features Widget *************** -->
-  <Features
-    id="features"
-    title="Nuestros productos"
-    subtitle=""
-    columns={2}
-    items={[
-      {
-        title: 'Videovigilancia',
-        description:
-          'Videovigilancia para Pymes, Comercios y Hogares.',
-        icon: 'line-md:watch',
-      },
-      {
-        title: 'Instalación y configuración',
-        description: `Asesoramiento e instalación profesional.`,
-        icon: 'line-md:cog-loop',
-      },
-      {
-        title: 'Mantenimiento y Soporte Técnico',
-        description:
-          'Servicio postventa y asistencia permanente.',
-        icon: 'line-md:construction',
-      }
-    ]}
-  />
-
   <!-- Content Widget **************** -->
 
   <Content
     title="¿Quienes somos?"
+    id='nosotros'
     subtitle="Somos una empresa en crecimiento con el conocimiento y la experiencia para ofrecer soluciones de seguridad modernas y accesibles. Nuestro compromiso es brindar tranquilidad a través de tecnología de vanguardia y un servicio profesional de confianza."
     isReversed
     items={[
@@ -245,6 +168,33 @@ const metadata = {
     </Fragment>
   </Content>
 
+
+    <!-- Features Widget *************** -->
+    <Features
+    id="servicios"
+    title="Nuestros servicios"
+    subtitle=""
+    columns={2}
+    items={[
+      {
+        title: 'Videovigilancia',
+        description:
+          'Videovigilancia para Pymes, Comercios y Hogares.',
+        icon: 'line-md:watch',
+      },
+      {
+        title: 'Instalación y configuración',
+        description: `Asesoramiento e instalación profesional.`,
+        icon: 'line-md:cog-loop',
+      },
+      {
+        title: 'Mantenimiento y Soporte Técnico',
+        description:
+          'Servicio postventa y asistencia permanente.',
+        icon: 'line-md:construction',
+      }
+    ]}
+  />
   <!-- Pricing Widget ******************* -->
 
   <Pricing
@@ -331,6 +281,7 @@ const metadata = {
 
   <Steps2
     title="Contactanos"
+    id='contact'
     subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
       text: 'Whats app',
