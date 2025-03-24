@@ -45,100 +45,104 @@ const metadata = {
     </Fragment>
   </Hero2>
 
-  <!-- Content Widget **************** -->
+<!-- Content Widget **************** -->
 
-  <Content
-    title="¿Quienes somos?"
-    id='nosotros'
-    subtitle="Somos una empresa en crecimiento con el conocimiento y la experiencia para ofrecer soluciones de seguridad modernas y accesibles. Nuestro compromiso es brindar tranquilidad a través de tecnología de vanguardia y un servicio profesional de confianza."
-    isReversed
-    items={[
-      {
-        title: '¿Por que elegirnos?',
-        description:
-          'Brindamos soluciones a medida con equipos de última tecnología, instalación profesional y soporte postventa. Nos enfocamos en ofrecer un servicio eficiente, accesible y confiable, con atención personalizada y compromiso en cada proyecto.',
-      },
-      {
-        title: 'Calidad',
-        description: `Nuestro estandar es la calidad.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Ciudad Autónoma de Buenos Aires y Gran Buenos Aires <br /><span class="text-2xl">Cerca de tu localidad</span>
-      </h3>
-    </Fragment>
+<Content
+  title="¿Quiénes somos?"
+  id="nosotros"
+  subtitle="Somos una empresa en constante crecimiento, especializada en soluciones de seguridad avanzadas y accesibles. Nuestro compromiso es brindarte tranquilidad a través de tecnología de vanguardia y un servicio profesional en el que puedes confiar."
+  isReversed
+  items={[
+    {
+      title: '¿Por qué elegirnos?',
+      description:
+        'Ofrecemos soluciones personalizadas con equipos de última generación, instalación profesional y soporte técnico postventa. Nos distinguimos por un servicio eficiente, accesible y confiable, con atención personalizada en cada proyecto.',
+    },
+    {
+      title: 'Compromiso con la calidad',
+      description: `Trabajamos con altos estándares para garantizar seguridad, eficiencia y durabilidad en cada instalación.`,
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+    alt: 'Equipo de trabajo en seguridad',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Seguridad en <br /><span class="text-2xl">CABA y GBA</span>
+    </h3>
+    <p class="text-lg text-gray-600 dark:text-slate-400">
+      Estamos cerca de tu localidad para brindarte soluciones rápidas y eficientes en seguridad electrónica.
+    </p>
+  </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Problema: Necesidad de vigilar una entrada y areas comunes de una casa',
-        description: `Solución: Instalamos cámaras con detección de movimiento.`,
-      },
-      {
-        title: 'Resultado',
-        description: `Mayor tranquilidad para la familia y acceso a las grabaciones en cualquier momento.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Caso de éxito real: <br /><span class="text-2xl">Hogar</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Problema: Accesos no controlados y falta de monitoreo en zonas clave.',
-        description: `Solución: Implementamos cámaras IP con visión nocturna y control de acceso.`,
-      },
-      {
-        title: 'Resultado:',
-        description: `Eliminación de ingresos no autorizados y mejor gestión de personal.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Portfolio Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Caso de éxito: <br /><span class="text-2xl">Industria</span>
-      </h3>
-    </Fragment>
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Desafío: Seguridad en accesos y áreas comunes del hogar',
+      description: `Solución: Instalamos cámaras con detección de movimiento y acceso remoto en tiempo real.`,
+    },
+    {
+      title: 'Beneficio',
+      description: `Mayor tranquilidad para la familia y acceso seguro a grabaciones desde cualquier dispositivo.`,
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+    alt: 'Videovigilancia en el hogar',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Caso de éxito: <br /><span class="text-2xl">Seguridad en el hogar</span>
+    </h3>
+  </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Desafío: Falta de control en accesos y monitoreo de áreas críticas',
+      description: `Solución: Implementamos cámaras IP con visión nocturna y control de acceso inteligente.`,
+    },
+    {
+      title: 'Beneficio:',
+      description: `Reducción de ingresos no autorizados, mejor supervisión del personal y mayor seguridad operativa.`,
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    alt: 'Videovigilancia en industrias',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Caso de éxito: <br /><span class="text-2xl">Seguridad industrial</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
     <!-- Brands Widget ****************** -->
 
@@ -190,74 +194,94 @@ const metadata = {
       },
     ]}
   />
-    <!-- Features Widget *************** -->
-    <Features
-    id="servicios"
-    title="Nuestros servicios"
-    subtitle=""
-    columns={2}
-    items={[
-      {
-        title: 'Videovigilancia',
-        description:
-          'Videovigilancia para Pymes, Comercios y Hogares.',
-        icon: 'line-md:watch',
-      },
-      {
-        title: 'Instalación y configuración',
-        description: `Asesoramiento e instalación profesional.`,
-        icon: 'line-md:cog-loop',
-      },
-      {
-        title: 'Mantenimiento y Soporte Técnico',
-        description:
-          'Servicio postventa y asistencia permanente.',
-        icon: 'line-md:construction',
-      }
-    ]}
-  />
-  <!-- Pricing Widget ******************* -->
+<!-- Features Widget *************** -->
+<Features
+  id="servicios"
+  title="Nuestros Servicios"
+  subtitle="Soluciones integrales de videovigilancia para tu seguridad"
+  columns={2}
+  items={[
+    {
+      title: 'Videovigilancia',
+      description:
+        'Sistemas de videovigilancia de alta calidad para hogares, comercios y empresas. Monitorea en tiempo real desde cualquier lugar.',
+      icon: 'line-md:watch',
+    },
+    {
+      title: 'Instalación y Configuración',
+      description: `Asesoramiento personalizado, instalación profesional y puesta en marcha de tu sistema de seguridad.`,
+      icon: 'line-md:cog-loop',
+    },
+    {
+      title: 'Mantenimiento y Soporte Técnico',
+      description:
+        'Servicio postventa con asistencia permanente. Mantenimiento preventivo y correctivo para garantizar el óptimo funcionamiento.',
+      icon: 'line-md:construction',
+    }
+  ]}
+/>
 
-  <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
+<!-- Pricing Widget ******************* -->
+
+<Pricing
+  title="Paquetes de Videovigilancia"
+  prices={[
+    {
+      title: 'Básico',
+      subtitle: 'Kit de seguridad ideal para hogares y pequeños negocios.',
+      price: '25.000',
+      period: 'ARS / único pago',
+      features: [
+        '2 cámaras HD',
+        'Almacenamiento en DVR (500GB)',
+        'Acceso remoto desde app',
+        'Instalación incluida',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Solicitar paquete',
+        href: '#',
       },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
+    },
+    {
+      title: 'Avanzado',
+      subtitle: 'Sistema completo con mayor cobertura y mejor almacenamiento.',
+      price: '50.000',
+      period: 'ARS / único pago',
+      features: [
+        '4 cámaras Full HD',
+        'DVR con almacenamiento de 1TB',
+        'Acceso remoto con notificaciones',
+        'Instalación profesional incluida',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Cotizar ahora',
+        href: '#',
       },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+    {
+      title: 'Empresarial',
+      subtitle: 'Solución robusta para empresas y grandes espacios.',
+      price: '120.000',
+      period: 'ARS / único pago',
+      features: [
+        '8 cámaras 4K con visión nocturna',
+        'NVR con almacenamiento de 4TB',
+        'Acceso remoto multiusuario',
+        'Soporte técnico premium',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Solicitar asesoramiento',
+        href: '#',
       },
-    ]}
-  />
+    },
+  ]}
+/>
+
 
   <!-- FAQs Widget ******************* -->
 
@@ -364,15 +388,16 @@ const metadata = {
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
+<!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+<!-- <BlogLatestPosts
+  id="blog"
+  title="Mantente informado con nuestro blog de seguridad"
+  information={`Explora nuestros artículos, guías y consejos sobre sistemas de videovigilancia, tecnología de seguridad y las mejores soluciones para proteger tu hogar y negocio.`}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-gray-100 dark:bg-transparent"></div>
+  </Fragment>
+</BlogLatestPosts> -->
+
 </Layout>
