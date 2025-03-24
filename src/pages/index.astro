@@ -6,10 +6,9 @@ import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
-import Brands from '~/components/widgets/Brands.astro';
 
 import FAQs from '~/components/widgets/FAQs.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 const metadata = {
   title: 'Bienvenidos ',
@@ -27,8 +26,8 @@ const metadata = {
       { text: 'facebook', href: 'https://www.facebook.com' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/iqcgzs5kx6a5xzpdixcc',
+      alt: 'Cámaras de seguridad',
     }}
   >
     <Fragment slot="title">
@@ -45,248 +44,243 @@ const metadata = {
     </Fragment>
   </Hero2>
 
+<!-- Content Widget **************** -->
+
+<Content
+  title="¿Quiénes somos?"
+  id="nosotros"
+  subtitle="Somos una empresa en constante crecimiento, especializada en soluciones de seguridad avanzadas y accesibles. Nuestro compromiso es brindarte tranquilidad a través de tecnología de vanguardia y un servicio profesional en el que puedes confiar."
+  isReversed
+  items={[
+    {
+      title: '¿Por qué elegirnos?',
+      description:
+        'Ofrecemos soluciones personalizadas con equipos de última generación, instalación profesional y soporte técnico postventa. Nos distinguimos por un servicio eficiente, accesible y confiable, con atención personalizada en cada proyecto.',
+    },
+    {
+      title: 'Compromiso con la calidad',
+      description: `Trabajamos con altos estándares para garantizar seguridad, eficiencia y durabilidad en cada instalación.`,
+    },
+  ]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/hptsxz9wwyiruw8u41n1',
+    alt: 'Equipo de trabajo en seguridad',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Seguridad en <br /><span class="text-2xl">CABA y GBA</span>
+    </h3>
+    <p class="text-lg text-gray-600 dark:text-slate-400">
+      Estamos cerca de tu localidad para brindarte soluciones rápidas y eficientes en seguridad electrónica.
+    </p>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Desafío: Seguridad en accesos y áreas comunes del hogar',
+      description: `Solución: Instalamos cámaras con detección de movimiento y acceso remoto en tiempo real.`,
+    },
+    {
+      title: 'Beneficio',
+      description: `Mayor tranquilidad para la familia y acceso seguro a grabaciones desde cualquier dispositivo.`,
+    },
+  ]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/icxzpzhvmgjocnieclxh',
+    alt: 'Videovigilancia en el hogar',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Caso de éxito: <br /><span class="text-2xl">Seguridad en el hogar</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<!-- Content Widget **************** -->
+
+<Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Desafío: Falta de control en accesos y monitoreo de áreas críticas',
+      description: `Solución: Implementamos cámaras IP con visión nocturna y control de acceso inteligente.`,
+    },
+    {
+      title: 'Beneficio:',
+      description: `Reducción de ingresos no autorizados, mejor supervisión del personal y mayor seguridad operativa.`,
+    },
+  ]}
+  image={{
+    src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_crop,x_200/f_auto,q_auto/v1/landings/flownet/ojm3we51atelkugnught',
+    alt: 'Videovigilancia en industrias',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Caso de éxito: <br /><span class="text-2xl">Seguridad industrial</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
     <!-- Brands Widget ****************** -->
 
     <Brands
     title="Marcas"
     subtitle="Manejamos diferentes marcas el cual su nombre significa calidad."
+    id='brands'
     icons={[]}
     images={[
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Dahua',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/crx8ryh552qk5fnca3g9',
+        alt: 'TP-LINK',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Hikvision',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/xs4eo6yqeyybvidl23ev',
+        alt: 'SEAGATE',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Ezviz',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/pe1821hwrmdkgyigmxqg',
+        alt: 'ALHUA',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Kalop',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_scale/f_auto,q_auto/v1/landings/flownet/marcas/xwebxjd9ru0fk2pxhx6k',
+        alt: 'KALOP',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Kingston',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_scale/f_auto,q_auto/v1/landings/flownet/marcas/csg7yrw6xacvall8vhpi',
+        alt: 'KINSGTON',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'cisco',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/kofq673yjdk1k5kfo24z',
+        alt: 'HIKVISION',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'seagate',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/k3zgnoy89xvnfikyti4w',
+        alt: 'FURUKAWA',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'tp-link',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/p97polzgzir1gy6gprcf',
+        alt: 'COMMSCOPE',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'furukawa',
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/marcas/wcw2bz6qub9ldc5hqc5k',
+        alt: 'EZVIZ',
       },
       {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'commscope',
-      },
-    ]}
-  />
-
-  <!-- Features Widget *************** -->
-  <Features
-    id="features"
-    title="Nuestros productos"
-    subtitle=""
-    columns={2}
-    items={[
-      {
-        title: 'Videovigilancia',
-        description:
-          'Videovigilancia para Pymes, Comercios y Hogares.',
-        icon: 'line-md:watch',
-      },
-      {
-        title: 'Instalación y configuración',
-        description: `Asesoramiento e instalación profesional.`,
-        icon: 'line-md:cog-loop',
-      },
-      {
-        title: 'Mantenimiento y Soporte Técnico',
-        description:
-          'Servicio postventa y asistencia permanente.',
-        icon: 'line-md:construction',
-      }
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    title="¿Quienes somos?"
-    subtitle="Somos una empresa en crecimiento con el conocimiento y la experiencia para ofrecer soluciones de seguridad modernas y accesibles. Nuestro compromiso es brindar tranquilidad a través de tecnología de vanguardia y un servicio profesional de confianza."
-    isReversed
-    items={[
-      {
-        title: '¿Por que elegirnos?',
-        description:
-          'Brindamos soluciones a medida con equipos de última tecnología, instalación profesional y soporte postventa. Nos enfocamos en ofrecer un servicio eficiente, accesible y confiable, con atención personalizada y compromiso en cada proyecto.',
-      },
-      {
-        title: 'Calidad',
-        description: `Nuestro estandar es la calidad.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        CABA y GBA <br /><span class="text-2xl">Cerca de tu localidad</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
-      },
-      {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Portfolio Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    items={[
-      {
-        title: '¿Cúal es el ideal para mi?',
-        description: `¿Tienes dudas o necesitas una cotización? 📩 Escríbenos a nuestro correo y te ayudaremos a encontrar la mejor solución en seguridad. ¡Estamos listos para atenderte!`,
-      },
-      {
-        title: 'Contactanos',
-        description: `Protege lo que más importa con la mejor tecnología en seguridad.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Contáctanos hoy <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Pricing Widget ******************* -->
-
-  <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
-      },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
+        src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/c_scale/f_auto,q_auto/v1/landings/flownet/marcas/xmkl0hkeeystmeaew9nm',
+        alt: 'CISCO',
       },
     ]}
   />
+<!-- Features Widget *************** -->
+<Features
+  id="servicios"
+  title="Nuestros Servicios"
+  subtitle="Soluciones integrales de videovigilancia para tu seguridad"
+  columns={2}
+  items={[
+    {
+      title: 'Videovigilancia',
+      description:
+        'Sistemas de videovigilancia de alta calidad para hogares, comercios y empresas. Monitorea en tiempo real desde cualquier lugar.',
+      icon: 'line-md:watch',
+    },
+    {
+      title: 'Instalación y Configuración',
+      description: `Asesoramiento personalizado, instalación profesional y puesta en marcha de tu sistema de seguridad.`,
+      icon: 'line-md:cog-loop',
+    },
+    {
+      title: 'Mantenimiento y Soporte Técnico',
+      description:
+        'Servicio postventa con asistencia permanente. Mantenimiento preventivo y correctivo para garantizar el óptimo funcionamiento.',
+      icon: 'line-md:construction',
+    }
+  ]}
+/>
+
+<!-- Pricing Widget ******************* -->
+
+<Pricing
+  title="Paquetes de Videovigilancia"
+  prices={[
+    {
+      title: 'Básico',
+      subtitle: 'Kit de seguridad ideal para hogares y pequeños negocios.',
+      price: '25.000',
+      period: 'ARS / único pago',
+      features: [
+        '2 cámaras HD',
+        'Almacenamiento en DVR (500GB)',
+        'Acceso remoto desde app',
+        'Instalación incluida',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Solicitar paquete',
+        href: '#',
+      },
+    },
+    {
+      title: 'Avanzado',
+      subtitle: 'Sistema completo con mayor cobertura y mejor almacenamiento.',
+      price: '50.000',
+      period: 'ARS / único pago',
+      features: [
+        '4 cámaras Full HD',
+        'DVR con almacenamiento de 1TB',
+        'Acceso remoto con notificaciones',
+        'Instalación profesional incluida',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Cotizar ahora',
+        href: '#',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+    {
+      title: 'Empresarial',
+      subtitle: 'Solución robusta para empresas y grandes espacios.',
+      price: '120.000',
+      period: 'ARS / único pago',
+      features: [
+        '8 cámaras 4K con visión nocturna',
+        'NVR con almacenamiento de 4TB',
+        'Acceso remoto multiusuario',
+        'Soporte técnico premium',
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Solicitar asesoramiento',
+        href: '#',
+      },
+    },
+  ]}
+/>
+
 
   <!-- FAQs Widget ******************* -->
 
@@ -327,10 +321,43 @@ const metadata = {
     </Fragment>
   </FAQs>
 
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: '¿Cúal es el ideal para mi?',
+        description: `¿Tienes dudas o necesitas una cotización? 📩 Escríbenos a nuestro correo y te ayudaremos a encontrar la mejor solución en seguridad. ¡Estamos listos para atenderte!`,
+      },
+      {
+        title: 'Hablemos sobre tu seguridad',
+        description: `Protege lo que más importa con la mejor tecnología en seguridad.`,
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/gbeh2afd78vbhewl81q4',
+      alt: 'Cerca electrificada',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Cuida de los tuyos <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+
+
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
     title="Contactanos"
+    id='contact'
     subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
       text: 'Whats app',
@@ -360,15 +387,16 @@ const metadata = {
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
+<!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+<!-- <BlogLatestPosts
+  id="blog"
+  title="Mantente informado con nuestro blog de seguridad"
+  information={`Explora nuestros artículos, guías y consejos sobre sistemas de videovigilancia, tecnología de seguridad y las mejores soluciones para proteger tu hogar y negocio.`}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-gray-100 dark:bg-transparent"></div>
+  </Fragment>
+</BlogLatestPosts> -->
+
 </Layout>
