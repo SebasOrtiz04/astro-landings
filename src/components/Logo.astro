@@ -1,9 +1,12 @@
 ---
+import Image from 'astro/components/Image.astro';
 import { SITE } from 'astrowind:config';
+
+const logoUrl = 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/ioq6e6nvbvyrqatjaesw';
 ---
 
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  🚀 {SITE?.name}
+  <Image src={logoUrl} srcset={logoUrl} alt={SITE.name} width={100} height={40} />
 </span>
