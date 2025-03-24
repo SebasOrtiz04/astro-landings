@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+
 
 export const headerData = {
   links: [
@@ -7,7 +7,7 @@ export const headerData = {
     {text: 'Servicios', href: '/#servicios',},
     {text: 'Contácto', href: '/#contact',},
   ],
-  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ href: '#', target: '_blank', icon: 'tabler:brand-whatsapp', variant: 'icon'},],
 };
 
 export const footerData = {
