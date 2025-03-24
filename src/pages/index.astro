@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
@@ -9,12 +8,11 @@ import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'Bienvenidos ',
 };
 ---
 
@@ -159,7 +157,7 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     isAfterContent={true}
     items={[
       {
@@ -185,11 +183,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -216,7 +214,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -249,7 +247,7 @@ const metadata = {
 
   <!-- Pricing Widget ******************* -->
 
-  <!-- <Pricing
+  <Pricing
     title="Flexible pricing plans"
     prices={[
       {
@@ -288,7 +286,7 @@ const metadata = {
         },
       },
     ]}
-  /> -->
+  />
 
   <!-- FAQs Widget ******************* -->
 
@@ -364,7 +362,7 @@ const metadata = {
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <!-- <BlogLatestPosts
+  <BlogLatestPosts
     id="blog"
     title="Stay informed with AstroWind's blog"
     information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
@@ -373,4 +371,4 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts>
-</Layout> -->
+</Layout>
