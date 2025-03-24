@@ -70,7 +70,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        CABA y GBA <br /><span class="text-2xl">Cerca de tu localidad</span>
+        Ciudad Autónoma de Buenos Aires y Gran Buenos Aires <br /><span class="text-2xl">Cerca de tu localidad</span>
       </h3>
     </Fragment>
 
@@ -85,12 +85,12 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
+        title: 'Problema: Necesidad de vigilar una entrada y areas comunes de una casa',
+        description: `Solución: Instalamos cámaras con detección de movimiento.`,
       },
       {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        title: 'Resultado',
+        description: `Mayor tranquilidad para la familia y acceso a las grabaciones en cualquier momento.`,
       },
     ]}
     image={{
@@ -100,7 +100,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
+        Caso de éxito real: <br /><span class="text-2xl">Hogar</span>
       </h3>
     </Fragment>
 
@@ -116,12 +116,12 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
+        title: 'Problema: Accesos no controlados y falta de monitoreo en zonas clave.',
+        description: `Solución: Implementamos cámaras IP con visión nocturna y control de acceso.`,
       },
       {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        title: 'Resultado:',
+        description: `Eliminación de ingresos no autorizados y mejor gestión de personal.`,
       },
     ]}
     image={{
@@ -131,7 +131,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
+        Caso de éxito: <br /><span class="text-2xl">Industria</span>
       </h3>
     </Fragment>
 
@@ -190,37 +190,6 @@ const metadata = {
       },
     ]}
   />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    items={[
-      {
-        title: '¿Cúal es el ideal para mi?',
-        description: `¿Tienes dudas o necesitas una cotización? 📩 Escríbenos a nuestro correo y te ayudaremos a encontrar la mejor solución en seguridad. ¡Estamos listos para atenderte!`,
-      },
-      {
-        title: 'Contactanos',
-        description: `Protege lo que más importa con la mejor tecnología en seguridad.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Contáctanos hoy <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-
     <!-- Features Widget *************** -->
     <Features
     id="servicios"
@@ -328,6 +297,38 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </FAQs>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: '¿Cúal es el ideal para mi?',
+        description: `¿Tienes dudas o necesitas una cotización? 📩 Escríbenos a nuestro correo y te ayudaremos a encontrar la mejor solución en seguridad. ¡Estamos listos para atenderte!`,
+      },
+      {
+        title: 'Hablemos sobre tu seguridad',
+        description: `Protege lo que más importa con la mejor tecnología en seguridad.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Small Business Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Cuida de los tuyos <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+
 
   <!-- Steps2 Widget ****************** -->
 
