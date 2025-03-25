@@ -18,9 +18,9 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl bg-primary mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <div class="flex items-stretch justify-center">
+  <div class="flex items-stretch justify-center ">
     <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {
         prices &&
@@ -29,14 +29,14 @@ const {
               <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 flex w-full max-w-sm flex-col justify-between text-center relative">
                 <div class="px-2 py-0">
                   {title && (
-                    <h3 class="text-center text-xl font-semibold uppercase leading-6 tracking-wider mb-2">{title}</h3>
+                    <h3 class="text-center text-xl  font-semibold uppercase leading-6 tracking-wider mb-2">{title}</h3>
                   )}
                   {subtitle && <p class="font-light sm:text-lg text-gray-600 dark:text-slate-400">{subtitle}</p>}
 
                   {features.length > 0 && (
                     <ul class="my-8 md:my-10 space-y-2 text-left">
-                      {features.map((feature, index) => (
-                        <li key={index} class="mb-1.5 flex items-start space-x-3 leading-7">
+                      {features.map((feature) => (
+                        <li class="mb-1.5 flex items-start space-x-3 leading-7">
                           <div class="rounded-full bg-primary mt-1">
                             <Icon name="tabler:check" class="w-5 h-5 font-bold p-1 text-white" />
                           </div>
