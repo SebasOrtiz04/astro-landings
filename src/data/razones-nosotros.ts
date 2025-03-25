@@ -20,19 +20,19 @@ export const razones: Array<Item> = [
     icon: 'tabler:info-octagon',
   },
   {
-    title: 'Garantía de Disponibilidad',
+    title: 'Garantía de disponibilidad',
     description:
       'Aseguramos tener suficiente inventario incluso para los eventos más grandes.',
     icon: 'tabler:check',
   },
   {
-    title: 'Política de Cambios',
+    title: 'Política de cambios',
     description:
       "Si necesitas ajustar tu pedido, lo hacemos fácil y sin complicaciones.",
     icon: 'tabler:exchange',
   },
   {
-    title: 'Promociones Especiales',
+    title: 'Promociones especiales',
     description:
       'Paquetes con descuento para eventos recurrentes o alquileres grandes.',
     icon: 'tabler:discount',
