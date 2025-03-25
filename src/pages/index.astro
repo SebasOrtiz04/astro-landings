@@ -13,6 +13,15 @@ import Brands from '~/components/widgets/Brands.astro';
 const metadata = {
   title: 'Bienvenidos ',
 };
+
+const textoWhats=encodeURIComponent("Hola, me interesa una cotización")
+const numero="5491132154237"
+const correo = "Flownetsoluciones@gmail.com"
+const dataFacundo={
+  "celular":`+${numero}`,
+  "whats":`https://wa.me/${numero}?text=${textoWhats}`,
+  "mailto":`mailto:${correo}`
+}
 ---
 
 <Layout metadata={metadata}>
@@ -22,8 +31,8 @@ const metadata = {
   <Hero2
     tagline="Flownet"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Whats app', href: "https://wa.me/15551234567?text=I'm%20interested%20in%20your%20car%20for%20sale'" },
-      { text: 'facebook', href: 'https://www.facebook.com' },
+      { variant: 'primary', target: '_blank', text: 'Whats app', href: dataFacundo.whats },
+      { text: 'E-mail', href: dataFacundo.mailto },
     ]}
     image={{
       src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/iqcgzs5kx6a5xzpdixcc',
@@ -47,19 +56,19 @@ const metadata = {
 <!-- Content Widget **************** -->
 
 <Content
-  title="¿Quiénes somos?"
+  title="Protegiendo lo que más importa"
   id="nosotros"
-  subtitle="Somos una empresa en constante crecimiento, especializada en soluciones de seguridad avanzadas y accesibles. Nuestro compromiso es brindarte tranquilidad a través de tecnología de vanguardia y un servicio profesional en el que puedes confiar."
+  subtitle="En Flownet somos expertos en soluciones de videovigilancia para hogares, negocios y empresas. Ofrecemos tecnología de punta en seguridad para garantizar tu tranquilidad."
   isReversed
   items={[
     {
-      title: '¿Por qué elegirnos?',
+      title: '¿Por qué confiar en nosotros?',
       description:
-        'Ofrecemos soluciones personalizadas con equipos de última generación, instalación profesional y soporte técnico postventa. Nos distinguimos por un servicio eficiente, accesible y confiable, con atención personalizada en cada proyecto.',
+        'Nuestro equipo altamente capacitado trabaja con marcas líderes en el mercado, brindando soluciones personalizadas para cada necesidad. En Flownet, tu seguridad es nuestra prioridad.',
     },
     {
-      title: 'Compromiso con la calidad',
-      description: `Trabajamos con altos estándares para garantizar seguridad, eficiencia y durabilidad en cada instalación.`,
+      title: 'Excelencia y compromiso',
+      description: `Te ofrecemos tecnología de última generación para proteger lo que más valorás. ¡Solicitá hoy una asesoría gratuita y descubrí la mejor solución para vos!`,
     },
   ]}
   image={{
@@ -69,10 +78,10 @@ const metadata = {
 >
   <Fragment slot="content">
     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Seguridad en <br /><span class="text-2xl">CABA y GBA</span>
+      Seguridad confiable en <br /><span class="text-2xl">CABA y GBA</span>
     </h3>
     <p class="text-lg text-gray-600 dark:text-slate-400">
-      Estamos cerca de tu localidad para brindarte soluciones rápidas y eficientes en seguridad electrónica.
+      Estamos cerca de vos para brindarte soluciones rápidas, eficientes y adaptadas a tus necesidades en seguridad electrónica.
     </p>
   </Fragment>
 
@@ -82,9 +91,10 @@ const metadata = {
 </Content>
 
 
+
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
   isAfterContent={true}
   items={[
     {
@@ -110,11 +120,11 @@ const metadata = {
   <Fragment slot="bg">
     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
   </Fragment>
-</Content>
+</Content> -->
 
 <!-- Content Widget **************** -->
 
-<Content
+<!-- <Content
   isReversed
   isAfterContent={true}
   items={[
@@ -141,7 +151,7 @@ const metadata = {
   <Fragment slot="bg">
     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
   </Fragment>
-</Content>
+</Content> -->
 
     <!-- Brands Widget ****************** -->
 
@@ -223,60 +233,37 @@ const metadata = {
 <!-- Pricing Widget ******************* -->
 
 <Pricing
-  title="Paquetes de Videovigilancia"
+  title="Soluciones de Videovigilancia"
   prices={[
     {
-      title: 'Básico',
-      subtitle: 'Kit de seguridad ideal para hogares y pequeños negocios.',
-      price: '25.000',
-      period: 'ARS / único pago',
+      title: 'Hogares',
+      subtitle: 'Con nuestros sistemas de CCTV podrás monitorear tu hogar en tiempo real desde cualquier lugar mediante dispositivos móviles o computadoras.',
       features: [
-        '2 cámaras HD',
-        'Almacenamiento en DVR (500GB)',
-        'Acceso remoto desde app',
-        'Instalación incluida',
+        'Instalación de cámaras de alta definición con visión nocturna.',
+        'Acceso remoto seguro a través de aplicaciones móviles.',
+        'Sistemas con detección de movimiento y notificaciones en tiempo real.',
+        'Grabación y almacenamiento en la nube o dispositivos locales.',
+        'Asesoría y soporte técnico especializado.',
       ],
-      callToAction: {
-        target: '_blank',
-        text: 'Solicitar paquete',
-        href: '#',
-      },
     },
     {
-      title: 'Avanzado',
-      subtitle: 'Sistema completo con mayor cobertura y mejor almacenamiento.',
-      price: '50.000',
-      period: 'ARS / único pago',
+      title: 'Empresas',
+      subtitle: 'Controla y supervisa tus instalaciones de manera eficiente.',
       features: [
-        '4 cámaras Full HD',
-        'DVR con almacenamiento de 1TB',
-        'Acceso remoto con notificaciones',
-        'Instalación profesional incluida',
+        'Instalación de cámaras IP y analógicas con alta resolución.',
+        'Monitoreo en tiempo real y grabación continua.',
+        'Soluciones escalables según el tamaño de la empresa.',
+        'Mantenimiento preventivo y correctivo.',
       ],
-      callToAction: {
-        target: '_blank',
-        text: 'Cotizar ahora',
-        href: '#',
-      },
-      hasRibbon: true,
-      ribbonTitle: 'Recomendado',
     },
     {
-      title: 'Empresarial',
-      subtitle: 'Solución robusta para empresas y grandes espacios.',
-      price: '120.000',
-      period: 'ARS / único pago',
+      title: 'Comercios',
+      subtitle: 'Optimiza la seguridad de tu comercio con los sistemas de CCTV de Flownet. Protege tu negocio y supervisa sus operaciones de manera eficiente.',
       features: [
-        '8 cámaras 4K con visión nocturna',
-        'NVR con almacenamiento de 4TB',
-        'Acceso remoto multiusuario',
-        'Soporte técnico premium',
+        'Análisis de puntos críticos.',
+        'Diseño de sistema cerrado de vigilancia.',
+        'Monitoreo en vivo y grabación remota.',
       ],
-      callToAction: {
-        target: '_blank',
-        text: 'Solicitar asesoramiento',
-        href: '#',
-      },
     },
   ]}
 />
@@ -361,29 +348,29 @@ const metadata = {
     subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
       text: 'Whats app',
-      href: "https://wa.me/15551234567?text=I'm%20interested%20in%20your%20car%20for%20sale'",
+      href: dataFacundo.whats,
     }}
     items={[
       {
         title: 'Email us',
-        description: 'Flownetsoluciones@gmail.com',
+        description: correo,
         icon: 'line-md:email',
       },
       {
         title: 'Llamanos',
-        description: '+1 (234) 567-890',
+        description: dataFacundo.celular,
         icon: 'line-md:phone-call-loop',
       },
       {
         title: 'Ubicación',
         description: 'CABA y GBA',
         icon: 'line-md:map-marker-alt-loop',
-      },
-      {
-        title: 'Siguenos',
-        description: '@example',
-        icon: 'line-md:facebook',
-      },
+      }
+      // {
+      //   title: 'Siguenos',
+      //   description: '@example',
+      //   icon: 'line-md:facebook',
+      // },
     ]}
   />
 
