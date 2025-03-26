@@ -22,8 +22,8 @@ const metadata = {
   <Hero3
     tagline="Flownet"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Whats app', href: dataFacundo.whats },
-      { text: 'E-mail', href: dataFacundo.mailto },
+      { variant: 'primary', target: '_blank', text: 'Contactar', icon: 'tabler:brand-whatsapp', href: dataFacundo.whats },
+      { text: 'Quiero Información',icon:'tabler:mail', href: dataFacundo.mailto, target: '_blank', },
     ]}
     image={{
       src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/iqcgzs5kx6a5xzpdixcc',
@@ -44,7 +44,7 @@ const metadata = {
         Brindamos soluciones de seguridad confiables y personalizadas, utilizando tecnología de vanguardia para proteger lo que más importa
       </span>
     </Fragment>
-  </Hero>
+</Hero3>
 
 <!-- Content Widget **************** -->
 
@@ -320,7 +320,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/gbeh2afd78vbhewl81q4',
+      src: 'https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/landings/flownet/tax1rg6xfeu5sd7x8xdh',
       alt: 'Cerca electrificada',
     }}
   >
@@ -345,7 +345,8 @@ const metadata = {
     id='contact'
     subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
-      text: 'WhatsApp',
+      text: 'Chatea con nosotros',
+      icon: 'tabler:brand-whatsapp',
       href: dataFacundo.whats,
       target  : '_blank',
     }}

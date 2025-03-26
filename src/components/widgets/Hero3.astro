@@ -24,10 +24,10 @@ const {
       {bg ? <Fragment set:html={bg} /> : null}
     </slot>
   </div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+  <div class="relative">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+    <div class="py-12 md:py-20 relative bg-gray-100/70">
+      <div class="text-center z-10 pb-10 md:pb-16 max-w-5xl mx-auto">
         {
           tagline && (
             <p
@@ -71,28 +71,22 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div
-        class="intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-      >
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
+      <div class="absolute inset-0 -z-10">
+        {image && (
+          <div class="relative w-full h-full">
+            {typeof image === 'string' ? (
+              <Fragment set:html={image} class="w-full h-full object-cover" />
+            ) : (
+              <Image
+                class="w-full h-full object-cover"
+                loading="eager"
+                width={2040}
+                height={800}
+                {...image}
+              />
+            )}
+          </div>
+        )}
       </div>
     </div>
   </div>
