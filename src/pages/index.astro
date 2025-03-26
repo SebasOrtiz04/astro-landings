@@ -1,12 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
-
+import Hero3 from '~/components/widgets/Hero3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import { dataFacundo } from '~/utils/utils';
@@ -20,7 +19,7 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2
+  <Hero3
     tagline="Flownet"
     actions={[
       { variant: 'primary', target: '_blank', text: 'Whats app', href: dataFacundo.whats },
@@ -45,7 +44,7 @@ const metadata = {
         Brindamos soluciones de seguridad confiables y personalizadas, utilizando tecnología de vanguardia para proteger lo que más importa
       </span>
     </Fragment>
-  </Hero2>
+  </Hero>
 
 <!-- Content Widget **************** -->
 
