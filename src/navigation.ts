@@ -31,7 +31,7 @@ export const footerData = {
     // { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+    { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: dataFacundo.whats,target: '_blank' },
     // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
