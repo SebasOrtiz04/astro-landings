@@ -9,19 +9,11 @@ import Pricing from '~/components/widgets/Pricing.astro';
 
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import { dataFacundo } from '~/utils/utils';
 
 const metadata = {
   title: 'Bienvenidos ',
 };
-
-const textoWhats=encodeURIComponent("Hola, me interesa una cotización")
-const numero="5491132154237"
-const correo = "Flownetsoluciones@gmail.com"
-const dataFacundo={
-  "celular":`+${numero}`,
-  "whats":`https://wa.me/${numero}?text=${textoWhats}`,
-  "mailto":`mailto:${correo}`
-}
 ---
 
 <Layout metadata={metadata}>
@@ -40,16 +32,18 @@ const dataFacundo={
     }}
   >
     <Fragment slot="title">
-      Videovigilancia para<br />Pymes, Comercios <span class="text-accent dark:text-white highlight"
+      <div class="text-gray-950">
+        Videovigilancia para<br />Pymes, Comercios <span class="text-accent dark:text-white highlight"
         >y</span
-      > Hogares<br />
+        > Hogares<br />
+      </div>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Flownet</span> es una empresa argentina especializada en sistemas de videovigilancia para pymes, comercios y hogares.</span
-      >
-      Brindamos soluciones de seguridad confiables y personalizadas, utilizando tecnología de vanguardia para proteger lo que más importa
+      <span class="hidden sm:inline text-default">
+        <span class="font-semibold text-accent">Flownet</span> es una empresa argentina especializada en sistemas de videovigilancia para pymes, comercios y hogares.
+        Brindamos soluciones de seguridad confiables y personalizadas, utilizando tecnología de vanguardia para proteger lo que más importa
+      </span>
     </Fragment>
   </Hero2>
 
@@ -266,7 +260,11 @@ const dataFacundo={
       ],
     },
   ]}
-/>
+>
+<Fragment slot="title">
+  <div class="text-gray-50"></div>
+</Fragment>
+</Pricing>
 
 
   <!-- FAQs Widget ******************* -->
@@ -277,7 +275,7 @@ const dataFacundo={
       {
         title: 'Consulta y Asesoramiento – Analizamos tu necesidad.',
         description:
-          'Contactanos mediante cualquier medio y nosotros te asesoraremos para llevar tu idea a cabo.',
+          'Contáctanos mediante cualquier medio y nosotros te asesoraremos para llevar tu idea a cabo.',
         icon: 'tdesign:numbers-1',
       },
       {
@@ -311,6 +309,7 @@ const dataFacundo={
   <!-- Content Widget **************** -->
 
   <Content
+  title='Seguridad para todos'
     items={[
       {
         title: '¿Cúal es el ideal para mi?',
@@ -327,7 +326,7 @@ const dataFacundo={
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="text-2xl font-bold text-gray-50 tracking-tight dark:text-white sm:text-3xl mb-2">
         Cuida de los tuyos <br /><span class="text-2xl">Da el primer paso hacia una vigilancia sin preocupaciones.</span>
       </h3>
     </Fragment>
@@ -343,21 +342,22 @@ const dataFacundo={
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Contactanos"
+    title="Contáctanos"
     id='contact'
     subtitle="¡Tu seguridad no puede esperar! 📞 Llámanos ahora y descubre la mejor solución en vigilancia para tu hogar o negocio."
     callToAction={{
-      text: 'Whats app',
+      text: 'WhatsApp',
       href: dataFacundo.whats,
+      target  : '_blank',
     }}
     items={[
       {
         title: 'Email us',
-        description: correo,
+        description: dataFacundo.mail,
         icon: 'line-md:email',
       },
       {
-        title: 'Llamanos',
+        title: 'Llámanos',
         description: dataFacundo.celular,
         icon: 'line-md:phone-call-loop',
       },

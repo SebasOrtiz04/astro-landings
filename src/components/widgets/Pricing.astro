@@ -19,7 +19,13 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl bg-primary mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <Headline subtitle={subtitle} tagline={tagline} >
+    <Fragment slot="title">
+      <div class="text-gray-50">
+        {title}
+      </div>
+    </Fragment>
+  </Headline>
   <div class="flex items-stretch justify-center ">
     <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {

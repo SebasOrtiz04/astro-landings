@@ -50,3 +50,13 @@ export const toUiAmount = (amount: number) => {
 
   return value;
 };
+
+const textoWhats=encodeURIComponent("Hola, me interesa una cotización")
+const numero="5491132154237"
+const correo = "Flownetsoluciones@gmail.com"
+export const dataFacundo={
+  "celular":`+${numero}`,
+  "whats":`https://wa.me/${numero}?text=${textoWhats}`,
+  "mailto":`mailto:${correo}`,
+  "mail":correo
+}
