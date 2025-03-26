@@ -1,3 +1,4 @@
+import { dataFacundo } from "./utils/utils";
 
 
 export const headerData = {
@@ -7,7 +8,7 @@ export const headerData = {
     {text: 'Servicios', href: '/#servicios',},
     {text: 'Contácto', href: '/#contact',},
   ],
-  actions: [{ href: '#', target: '_blank', icon: 'tabler:brand-whatsapp', variant: 'icon'},],
+  actions: [{ href: dataFacundo.whats, target: '_blank', icon: 'tabler:brand-whatsapp', variant: 'icon'},],
 };
 
 export const footerData = {
@@ -31,8 +32,8 @@ export const footerData = {
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],

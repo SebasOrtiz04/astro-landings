@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Flownet
+    default: Instalación de Cámaras de Seguridad, CCTV y Videovigilancia en Argentina — Flownet
     template: '%s — Flownet'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 ⚡ Expertos en instalación de cámaras de seguridad en Argentina. Protege tu hogar, negocio o empresa con soluciones de videovigilancia profesional. Asesoramiento personalizado y tecnología de última generación."
   robots:
     index: true
     follow: true
