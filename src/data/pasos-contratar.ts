@@ -4,7 +4,7 @@ export const pasosContratar: Array<Item> = [
   {
     title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
     description:
-      "Mandanos mensaje por whatsapp o déjanos tu contacto y fecha de interes y nos pondremos en contacto contigo.",
+      "Mandanos mensaje por whatsapp o déjanos tu contacto y fecha de interés y nos pondremos en contacto contigo.",
     icon: 'tabler:brand-whatsapp',
   },
   {
@@ -20,7 +20,7 @@ export const pasosContratar: Array<Item> = [
     icon: 'tabler:paywall',
   },
   {
-    title: 'Todo listo para tu fiesta!',
+    title: '!Todo listo para tu fiesta!',
     icon: 'tabler:check',
   },
 ];

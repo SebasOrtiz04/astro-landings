@@ -2,7 +2,7 @@ import type { Item } from "~/types";
 
 export const razones: Array<Item> = [
   {
-    title: 'Facilidad de reserva en linea',
+    title: 'Facilidad de reserva en línea',
     description:
       'Reserva lo que necesitas en minutos desde nuestras redes sociales.',
     icon: 'tabler:cloud',

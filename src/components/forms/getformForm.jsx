@@ -200,7 +200,7 @@ return (
                     </Stack>
 
                     <Stack error={formErrors.date_answer} value={form.date_answer}>
-                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interes <span className="text-red-500">*</span></label>
+                        <label className={labelStyles} id='date-label' htmlFor="date_answer"> Fecha de interés <span className="text-red-500">*</span></label>
                         <input
                             type="date"
                             id="date_answer"
@@ -217,7 +217,7 @@ return (
                 <PrivacyModal/>
 
                 <div error={formErrors.date_answer} value={form.date_answer} className="flex items-center">
-                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">He leido y acepto la politica de privacidad <span className="text-red-500">*</span> </label>
+                    <label className={`${labelStyles} text-xs`} id='date-label' htmlFor="date_answer">He leído y acepto la política de privacidad <span className="text-red-500">*</span> </label>
                     <input type='checkbox'
                         title="He leido y acepto la política de privacidad"
                         onChange={(e) => setForm({...form, privacy: e.target.checked})}
