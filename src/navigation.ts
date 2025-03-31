@@ -177,13 +177,27 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <div class="flex flex-col md:flex-row gap-2 items-baseline text-sm mr-4 dark:text-muted">
+    <div class="hidden md:flex flex-row items-baseline gap-1 text-sm mr-4 dark:text-muted">
       Hecho por 
-      <a class="text-blue-secondary underline dark:text-muted" target='_blank' href="https://github.com/abraham1229"> Abraham Ortiz</a> 
+      <a class="text-blue-secondary underline dark:text-muted " target='_blank' href="https://github.com/abraham1229">Abraham Ortiz</a> 
       basado en la plantilla astrowind MIT de 
-      <a class="text-blue-secondary flex items-baseline gap-2 underline dark:text-muted" target='_blank' href="https://onwidget.com/"> 
-      <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-      onWidget</a> .
+      <a class="text-blue-secondary flex items-baseline underline dark:text-muted" target='_blank' href="https://onwidget.com/"> 
+        onWidget
+      </a>.
+    </div>
+
+    <div class="flex md:hidden flex-col items-baseline gap-1 text-sm mr-4 dark:text-muted">
+      <div>
+        Hecho por 
+      <a class="text-blue-secondary underline dark:text-muted " target='_blank' href="https://github.com/abraham1229">Abraham Ortiz</a>. 
+      </div>
+      <div>
+        Basado en la plantilla astrowind MIT de
+      <a class="text-blue-secondary inline items-baseline underline dark:text-muted" target='_blank' href="https://onwidget.com/"> 
+        onWidget
+      </a>.
+      </div>
+
     </div>
   `,
 };
