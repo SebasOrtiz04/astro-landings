@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Features2 from "../widgets/Features2.astro";
+
+---
+
+<section class="flex flex-col items-center justify-start gap-2 max-w-[1024px] mx-auto " >
+  <Features2
+    title="Calidad, Compromiso y Experiencia"
+    subtitle="Nueestra experiencia habla de calidad, compromiso y responsabilidad en cada platillo que servimos."
+    items={[
+
+
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <article class="flex flex-col lg:flex-row gap-16 justify-space-between items-center my-10 w-full">
+    <Image class:list={'shadow-xl'} src="https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/WhatsApp_Image_2026-07-16_at_10.27.14_AM_1_fpkemu" alt="Geminis menu a quien corresponda" width="200" height="300" class="rounded-lg w-full lg:w-1/2" />
+      
+    <Image class:list={'shadow-xl'} src="https://res.cloudinary.com/dpm7xaauu/image/upload/f_auto,q_auto/v1/WhatsApp_Image_2026-07-16_at_10.27.14_AM_floyvd" alt="Geminis menu a quien corresponda" width="350" height="451" class="rounded-lg w-full lg:w-1/2" />
+  </article>
+</section>
