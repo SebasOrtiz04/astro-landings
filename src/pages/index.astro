@@ -15,6 +15,7 @@ import GeminisStats from '~/components/geminis/GeminisStats.astro';
 import GeminisServices from '~/components/geminis/GeminisServices.astro';
 import GeminisContact from '~/components/geminis/GeminisContact.astro';
 import GeminisFaqs from '~/components/geminis/GeminisFaqs.astro';
+import GeminisFlyers from '~/components/geminis/GeminisFlyers.astro';
 
 const metadata = {
   title: 'Inicio Comedor Industrial',
@@ -46,7 +47,7 @@ const metadata = {
   </Fragment>
 
     <Fragment slot="image">
-      <YouTube id="6ef-7BdR8Kc" title="Comedor Industrial Géminis, conoce un poco de nustro trabajo" />
+      <YouTube id="PwtX4yEFY9c" title="Comedor Industrial Géminis, conoce un poco de nustro trabajo" />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
@@ -67,6 +68,8 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <GeminisFlyers/>
 
   <!-- Stats Widget ****************** -->
 
@@ -154,9 +157,9 @@ const metadata = {
         icon: 'tabler:chef-hat',
       },
       {
-        title: 'Cobertura Global',
+        title: 'Cobertura Nacional',
         description:
-          'Operamos en múltiples países con infraestructura de primer nivel, asegurando eficiencia y cumplimiento normativo en cada región.',
+          'Operamos en múltiples estados de la Reública Mexicana con infraestructura de primer nivel, asegurando eficiencia y cumplimiento normativo en cada región.',
         icon: 'tabler:world',
       },
       {
@@ -178,9 +181,9 @@ const metadata = {
         icon: 'tabler:device-desktop',
       },
       {
-        title: 'Seguridad Alimentaria de Nivel Mundial',
+        title: 'Seguridad Alimentaria de Nivel Nacional',
         description:
-          'Cumplimos con estrictas normativas internacionales de higiene y seguridad para garantizar alimentos frescos y seguros.',
+          'Cumplimos con estrictas normativas nacionales de higiene y seguridad para garantizar alimentos frescos y seguros.',
         icon: 'tabler:shield-check',
       },
     ]}
